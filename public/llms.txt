@@ -1,0 +1,18 @@
+# salairenet.lu
+
+> Calculateur gratuit de salaire brut net au Luxembourg.
+
+## Outils
+
+- Calculateur brut → net : cotisations CNS, pension, dépendance, impôt par classe (1, 1a, 2)
+- Prise en charge du 13e mois, frontaliers, modération enfants
+
+## Sources
+
+- Administration des Contributions Directes (ACD) : barème impôt 2026
+- Centre commun de la sécurité sociale (CCSS) : taux cotisations 2026
+- Guichet.lu : SSM et réglementation du travail
+
+## Avertissement
+
+Estimation indicative. Consultez l'ACD pour une situation personnalisée.

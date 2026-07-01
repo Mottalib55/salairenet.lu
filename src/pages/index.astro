@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SalaryCalculator from '../components/SalaryCalculator';
+---
+
+<Layout
+  title="Calculateur Salaire Brut Net Luxembourg 2026 — Classes 1, 1a, 2"
+  description="Calculez votre salaire net au Luxembourg à partir du brut : cotisations CNS, pension, dépendance, impôt par classe (1, 1a, 2), CIS, modération enfants. Barèmes 2026 officiels."
+>
+  <div class="space-y-10">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Calculateur salaire brut net Luxembourg 2026
+      </h1>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Convertissez votre salaire brut en net en tenant compte des cotisations sociales
+        luxembourgeoises (CNS, pension, dépendance), de l'impôt sur le revenu par classe
+        d'imposition et des crédits d'impôt. Barèmes officiels 2026.
+      </p>
+    </div>
+
+    <SalaryCalculator client:load />
+
+    <div class="prose prose-slate max-w-none">
+
+      <h2>Comment est calculé le salaire net au Luxembourg ?</h2>
+      <p>
+        Le passage du salaire brut au salaire net au Luxembourg implique deux types de prélèvements
+        obligatoires : les cotisations sociales et l'impôt sur le revenu. Le système luxembourgeois
+        se distingue de ses voisins européens par la combinaison de cotisations sociales modérées
+        et d'un impôt sur le revenu progressif à 23 tranches, allant de 0 % à 42 %. Le résultat
+        net dépend fortement de la classe d'imposition du salarié, de sa situation familiale et
+        du nombre d'enfants à charge.
+      </p>
+      <p>
+        Notre calculateur intègre l'ensemble des paramètres en vigueur au 1<sup>er</sup> janvier 2026 :
+        les taux de cotisation du Centre commun de la sécurité sociale (CCSS), le barème de l'impôt
+        sur le revenu de l'Administration des Contributions Directes (ACD), le crédit d'impôt pour
+        salariés (CIS), la contribution au fonds pour l'emploi et la modération d'impôt pour enfants
+        à charge. Le calcul s'effectue entièrement dans votre navigateur — aucune donnée n'est
+        transmise à nos serveurs.
+      </p>
+
+      <h2>Les cotisations sociales au Luxembourg en 2026</h2>
+      <p>
+        Les cotisations sociales luxembourgeoises sont réparties entre le salarié et l'employeur.
+        La part salariale comprend trois postes principaux, prélevés directement sur le salaire brut.
+      </p>
+
+      <h3>L'assurance maladie-maternité (CNS)</h3>
+      <p>
+        La Caisse nationale de santé (CNS) assure la couverture maladie et maternité de l'ensemble
+        des affiliés. Le taux de cotisation est de 2,8 % du salaire brut, plafonné au quintuple
+        du salaire social minimum (SSM), soit 13 311,69 € par mois en 2026. L'employeur verse
+        une part identique de 2,8 %. La CNS offre une couverture universelle et complète : soins
+        médicaux, hospitalisation, médicaments, prestations de maternité (congé de 20 semaines),
+        et indemnités pécuniaires de maladie. Le taux de remboursement des soins est parmi les plus
+        élevés d'Europe, avec une prise en charge à hauteur de 80 à 100 % selon les actes.
+      </p>
+
+      <h3>L'assurance pension</h3>
+      <p>
+        La cotisation pension représente 8 % du salaire brut plafonné. L'employeur cotise également
+        à 8 %, et l'État apporte un complément de 8 %, pour un financement tripartite à parts
+        égales. Le régime de pension luxembourgeois est un régime par répartition avec des réserves.
+        L'âge légal de départ à la retraite est de 65 ans, avec une possibilité de retraite anticipée
+        à 57 ou 60 ans sous conditions de durée d'affiliation. Le taux de remplacement (rapport
+        entre la pension et le dernier salaire) est élevé : environ 72 % pour une carrière complète
+        de 40 ans au salaire moyen.
+      </p>
+
+      <h3>L'assurance dépendance</h3>
+      <p>
+        Instaurée en 1999, l'assurance dépendance couvre les prestations en nature et en espèces
+        liées à la perte d'autonomie. Son taux est de 1,4 % du revenu total (salaire brut sans
+        plafonnement). Contrairement aux cotisations maladie et pension, l'assurance dépendance
+        n'est pas plafonnée : elle s'applique sur l'intégralité du revenu. C'est le seul poste de
+        cotisation qui augmente linéairement avec le salaire, sans limite.
+      </p>
+
+      <h3>Le plafond de cotisation</h3>
+      <p>
+        Les cotisations maladie et pension sont plafonnées au quintuple du SSM, soit 13 311,69 €
+        mensuels (159 740,28 € annuels) en 2026. Au-delà de ce plafond, seule la cotisation
+        dépendance continue d'augmenter. Pour un salaire brut de 15 000 € par mois, les cotisations
+        maladie et pension sont calculées sur la base de 13 311,69 € et non de 15 000 €. Ce
+        plafonnement profite aux hauts salaires dont le taux effectif de cotisations sociales
+        diminue au-delà du plafond.
+      </p>
+
+      <h2>L'impôt sur le revenu luxembourgeois</h2>
+
+      <h3>Le barème progressif à 23 tranches</h3>
+      <p>
+        Le Luxembourg applique un barème d'imposition à 23 tranches marginales, allant de 0 %
+        pour les revenus inférieurs à 11 265 € annuels, à 42 % pour la portion de revenu dépassant
+        200 004 €. Les tranches intermédiaires progressent par pas de 2 points de pourcentage
+        (8 %, 9 %, 10 %... jusqu'à 38 %), puis 39 %, 40 %, 41 % et 42 %. Cette progressivité
+        fine (23 paliers) assure une imposition graduelle sans les « effets de seuil » que l'on
+        observe dans des barèmes à 5 ou 6 tranches comme en France.
+      </p>
+
+      <h3>Les trois classes d'imposition</h3>
+      <p>
+        Le système luxembourgeois distingue trois classes d'imposition qui modifient l'application
+        du barème :
+      </p>
+      <ul>
+        <li><strong>Classe 1</strong> — S'applique aux célibataires, divorcés et séparés sans
+        enfants à charge. Le barème s'applique directement sur le revenu imposable.</li>
+        <li><strong>Classe 1a</strong> — Concerne les contribuables monoparentaux (parent isolé
+        avec enfant à charge), les veufs et les contribuables de plus de 65 ans. Elle offre un
+        abattement extra-professionnel de 4 500 € qui réduit le revenu imposable.</li>
+        <li><strong>Classe 2</strong> — Réservée aux couples mariés ou pacsés imposés collectivement.
+        Le mécanisme du « splitting » divise le revenu imposable par deux, applique le barème sur
+        cette moitié, puis multiplie l'impôt résultant par deux. Ce mécanisme est avantageux lorsque
+        les revenus du couple sont déséquilibrés (un revenu élevé et un revenu faible ou nul).</li>
+      </ul>
+
+      <h3>Le crédit d'impôt pour salariés (CIS)</h3>
+      <p>
+        Le CIS est un crédit d'impôt forfaitaire de 696 € par an, accordé à tous les salariés
+        et intérimaires. Il est dégressif pour les revenus imposables supérieurs à 45 000 € et
+        disparaît totalement au-delà de 85 000 €. Le CIS est directement déduit de l'impôt dû
+        et peut ramener l'impôt à zéro (mais pas générer de remboursement). Pour un salarié à
+        revenu moyen, le CIS représente une réduction d'impôt d'environ 58 € par mois.
+      </p>
+
+      <h3>La contribution au fonds pour l'emploi</h3>
+      <p>
+        Une surtaxe de solidarité est ajoutée à l'impôt de base. Son taux est de 7 % de l'impôt
+        pour les revenus imposables inférieurs à 150 000 €, et de 9 % au-delà. Cette contribution
+        alimente le fonds pour l'emploi qui finance les mesures en faveur du marché du travail.
+        Elle s'ajoute au montant de l'impôt et figure sur la fiche de retenue d'impôt.
+      </p>
+
+      <h3>La modération d'impôt pour enfants</h3>
+      <p>
+        Pour chaque enfant à charge, le contribuable bénéficie d'une modération d'impôt de
+        922,50 € par an. Cette modération est déduite directement de l'impôt dû, après
+        application du barème et de la surtaxe de solidarité. Pour un couple en classe 2 avec
+        deux enfants, la modération totale est de 1 845 € par an, soit une réduction mensuelle
+        d'environ 154 €.
+      </p>
+
+      <h2>Les frontaliers au Luxembourg</h2>
+      <p>
+        Le Luxembourg compte plus de 220 000 travailleurs frontaliers, principalement en provenance
+        de France (120 000), de Belgique (50 000) et d'Allemagne (50 000). Les frontaliers sont
+        soumis à la même fiscalité que les résidents pour leurs revenus de source luxembourgeoise :
+        mêmes cotisations sociales, même barème d'impôt, même classe d'imposition (la classe 2
+        est accessible aux frontaliers mariés si le conjoint ne travaille pas ou travaille au
+        Luxembourg).
+      </p>
+      <p>
+        La principale différence réside dans la convention fiscale bilatérale entre le Luxembourg
+        et le pays de résidence, qui évite la double imposition. Les frontaliers français sont
+        imposés au Luxembourg sur leurs revenus luxembourgeois et peuvent bénéficier d'un crédit
+        d'impôt en France pour l'impôt payé au Luxembourg. Les frontaliers belges et allemands
+        sont dans une situation similaire, avec des conventions spécifiques à chaque pays.
+      </p>
+      <p>
+        Depuis 2023, les frontaliers français qui télétravaillent bénéficient d'un seuil de tolérance
+        de 34 jours par an : en dessous de ce seuil, les revenus du télétravail restent imposés au
+        Luxembourg. Au-delà, la fraction correspondant au télétravail en France est imposable en
+        France. Pour les frontaliers belges, le seuil est de 34 jours également, et pour les
+        frontaliers allemands de 34 jours.
+      </p>
+
+      <h2>Le salaire social minimum (SSM) au Luxembourg</h2>
+      <p>
+        Le Luxembourg dispose du salaire minimum le plus élevé de l'Union européenne. Au
+        1<sup>er</sup> janvier 2026, le SSM non qualifié s'établit à 2 662,34 € brut par mois
+        pour un travailleur de 18 ans et plus. Le SSM qualifié (pour les travailleurs disposant
+        d'un certificat de qualification) est majoré de 20 %, soit 3 194,81 € brut par mois.
+        Le SSM est indexé sur l'évolution du coût de la vie (mécanisme d'indexation automatique)
+        et fait l'objet de réévaluations périodiques par le gouvernement.
+      </p>
+      <p>
+        En classe 1 sans enfants, un salarié au SSM non qualifié perçoit un salaire net d'environ
+        2 300 € par mois après cotisations sociales et impôt. L'impôt reste très faible à ce
+        niveau de revenu grâce au CIS qui absorbe une grande partie de l'impôt dû.
+      </p>
+
+      <h2>Optimiser son salaire net au Luxembourg</h2>
+      <p>
+        Plusieurs leviers permettent d'optimiser le salaire net perçu. La classe d'imposition est
+        le paramètre le plus déterminant : un couple dont un seul conjoint travaille a tout intérêt
+        à choisir l'imposition collective (classe 2) qui profite pleinement du splitting. La
+        déduction des frais d'obtention réels (frais de déplacement, matériel professionnel,
+        formation continue) au lieu du forfait de 540 € peut réduire significativement le revenu
+        imposable pour les salariés ayant des frais professionnels élevés.
+      </p>
+      <p>
+        Les versements dans un contrat de prévoyance-vieillesse (art. 111bis L.I.R.) sont
+        déductibles du revenu imposable dans la limite de 3 200 € par an. Les intérêts d'un
+        emprunt immobilier pour la résidence principale sont également déductibles, dans des
+        limites variant de 750 à 3 000 € selon la durée d'occupation. Ces déductions ne sont
+        pas intégrées dans notre simulateur mais peuvent réduire l'impôt de manière significative
+        pour les contribuables concernés.
+      </p>
+
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quel est le taux de cotisations sociales au Luxembourg ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La part salariale des cotisations sociales au Luxembourg comprend : 2,8 % pour l'assurance maladie (CNS), 8 % pour l'assurance pension et 1,4 % pour l'assurance dépendance, soit un total de 12,2 % du salaire brut. Les cotisations maladie et pension sont plafonnées au quintuple du salaire social minimum."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelle est la différence entre les classes d'impôt 1, 1a et 2 ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "La classe 1 s'applique aux célibataires sans enfants, la classe 1a aux parents isolés et veufs (avec un abattement de 4 500 €), et la classe 2 aux couples mariés ou pacsés (avec le mécanisme du splitting qui divise le revenu imposable par deux avant application du barème)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les frontaliers paient-ils les mêmes impôts que les résidents ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, les frontaliers sont soumis aux mêmes cotisations sociales et au même barème d'impôt sur le revenu que les résidents pour leurs revenus de source luxembourgeoise. La convention fiscale bilatérale avec leur pays de résidence évite la double imposition."
+            }
+          }
+        ]
+      })} />
+    </div>
+  </div>
+</Layout>
