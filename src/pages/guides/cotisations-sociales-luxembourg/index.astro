@@ -1,0 +1,269 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Cotisations sociales au Luxembourg 2026 : maladie, pension, dépendance - Guide complet";
+const description = "Guide détaillé sur les cotisations sociales au Luxembourg : assurance maladie CNS 2,8 %, pension 8 %, dépendance 1,4 %, plafonds, couverture et calcul sur le salaire brut.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Cotisations sociales au Luxembourg", "item": "https://salairenet.lu/guides/cotisations-sociales-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le taux total de cotisations sociales pour un salarié au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le taux total de cotisations sociales à la charge du salarié au Luxembourg est de 12,2 % du salaire brut. Ce taux se décompose en : 2,8 % pour l'assurance maladie-maternité (CNS), 8 % pour l'assurance pension et 1,4 % pour l'assurance dépendance. Les cotisations maladie et pension sont plafonnées au quintuple du salaire social minimum (13 311,69 € par mois en 2026), tandis que la cotisation dépendance n'a pas de plafond."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le plafond de cotisation au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les cotisations maladie (2,8 %) et pension (8 %) sont plafonnées au quintuple du salaire social minimum, soit 13 311,69 € par mois en 2026 (159 740,28 € par an). Au-delà de ce plafond, ces cotisations ne sont plus prélevées sur la portion excédentaire. Seule la cotisation dépendance (1,4 %) s'applique sans plafond sur l'intégralité du salaire brut."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que couvre l'assurance maladie luxembourgeoise (CNS) ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La CNS couvre les soins médicaux (remboursement à 80-100 % selon les actes), l'hospitalisation (prise en charge quasi intégrale), les médicaments, les soins dentaires, la kinésithérapie, les prestations de maternité (congé de 20 semaines avec maintien du salaire) et les indemnités de maladie. La couverture s'étend à la famille du salarié (conjoint et enfants à charge), y compris pour les frontaliers."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Cotisations sociales au Luxembourg</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Cotisations sociales au Luxembourg en 2026 : guide complet</h1>
+
+    <p>
+      Les cotisations sociales constituent le premier prélèvement sur le salaire brut au Luxembourg. Elles financent le système de protection sociale luxembourgeois, l'un des plus généreux d'Europe, qui couvre l'assurance maladie-maternité, l'assurance pension (retraite) et l'assurance dépendance. Le salarié paie une part salariale de 12,2 % de son salaire brut, tandis que l'employeur contribue à hauteur d'environ 12,8 % supplémentaires. Ce guide détaille chaque composante des cotisations sociales, les plafonds applicables, les prestations couvertes et les exemples de calcul pour l'année 2026.
+    </p>
+
+    <h2>Vue d'ensemble des cotisations sociales 2026</h2>
+    <p>
+      Le système de sécurité sociale luxembourgeois est géré par le Centre commun de la sécurité sociale (CCSS), qui centralise l'affiliation et le recouvrement des cotisations. Les cotisations sont réparties entre le salarié et l'employeur, avec, pour la pension, une contribution supplémentaire de l'État (financement tripartite).
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Branche</th>
+          <th>Part salarié</th>
+          <th>Part employeur</th>
+          <th>Part État</th>
+          <th>Plafond</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Assurance maladie-maternité (CNS)</td><td>2,8 %</td><td>2,8 %</td><td>-</td><td>5 × SSM</td></tr>
+        <tr><td>Assurance pension</td><td>8,0 %</td><td>8,0 %</td><td>8,0 %</td><td>5 × SSM</td></tr>
+        <tr><td>Assurance dépendance</td><td>1,4 %</td><td>-</td><td>-</td><td>Aucun</td></tr>
+        <tr><td>Assurance accidents du travail</td><td>-</td><td>Variable</td><td>-</td><td>-</td></tr>
+        <tr><td>Santé au travail</td><td>-</td><td>~0,11 %</td><td>-</td><td>-</td></tr>
+        <tr><td>Mutualité des employeurs</td><td>-</td><td>Variable</td><td>-</td><td>-</td></tr>
+        <tr><td><strong>Total salarié</strong></td><td><strong>12,2 %</strong></td><td>-</td><td>-</td><td>-</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Le plafond de cotisation est fixé au quintuple du salaire social minimum (SSM). En 2026, le SSM non qualifié s'élève à 2 662,34 € par mois, ce qui donne un plafond de cotisation de 5 × 2 662,34 = 13 311,69 € par mois, soit 159 740,28 € par an. Ce plafond s'applique aux cotisations maladie et pension mais pas à la cotisation dépendance.
+    </p>
+
+    <h2>L'assurance maladie-maternité : la CNS</h2>
+    <p>
+      La Caisse nationale de santé (CNS) est l'organisme gestionnaire de l'assurance maladie-maternité au Luxembourg. La cotisation est de 2,8 % du salaire brut plafonné pour le salarié, et de 2,8 % supplémentaires à la charge de l'employeur, soit un total de 5,6 %.
+    </p>
+
+    <h3>Couverture maladie</h3>
+    <p>
+      La CNS offre une couverture maladie universelle et complète, considérée comme l'une des meilleures d'Europe. Les principaux postes de remboursement sont les suivants :
+    </p>
+    <ul>
+      <li><strong>Consultations médicales :</strong> remboursement à 88 % du tarif conventionnel pour les médecins généralistes et spécialistes. Le tiers payant est largement pratiqué, ce qui signifie que le patient ne paie que le ticket modérateur (12 %) directement au médecin.</li>
+      <li><strong>Hospitalisation :</strong> prise en charge quasi intégrale en chambre standard (2 lits). Le patient ne paie qu'un forfait journalier modique. Les séjours en chambre individuelle peuvent être couverts par une assurance complémentaire.</li>
+      <li><strong>Médicaments :</strong> remboursement variable selon la catégorie du médicament (de 0 % pour les médicaments de confort à 100 % pour les traitements essentiels). La plupart des médicaments courants sont remboursés à 80 %.</li>
+      <li><strong>Soins dentaires :</strong> remboursement des soins conservateurs et des prothèses dentaires selon un barème CNS. Les soins orthodontiques pour les enfants sont en grande partie pris en charge.</li>
+      <li><strong>Kinésithérapie et rééducation :</strong> prise en charge sur prescription médicale, avec un nombre de séances autorisées par pathologie.</li>
+      <li><strong>Optique et audioprothèses :</strong> participation aux frais selon des forfaits définis par la CNS.</li>
+    </ul>
+
+    <h3>Couverture maternité</h3>
+    <p>
+      Le congé de maternité au Luxembourg est de 20 semaines : 8 semaines avant la date présumée de l'accouchement (congé prénatal) et 12 semaines après (congé postnatal). Pendant toute la durée du congé, la salariée perçoit une indemnité pécuniaire de maternité égale à 100 % de son salaire brut, versée par la CNS. Cette indemnité est plafonnée au quintuple du SSM.
+    </p>
+    <p>
+      En complément, le Luxembourg accorde un congé parental de 4 ou 6 mois (selon que le salarié opte pour le temps plein ou le temps partiel), financé par la Caisse pour l'avenir des enfants. L'indemnité de congé parental à temps plein est de 2 515,04 € net par mois en 2026 (montant non imposable).
+    </p>
+
+    <h3>Indemnité pécuniaire de maladie</h3>
+    <p>
+      En cas de maladie, le salarié bénéficie d'un maintien de salaire intégral pendant les 77 premiers jours d'incapacité de travail (à la charge de l'employeur). Au-delà, la CNS verse une indemnité pécuniaire de maladie égale à 100 % du salaire brut, pendant une durée maximale de 78 semaines sur une période de référence de 104 semaines. Le Luxembourg est l'un des rares pays européens où l'indemnité de maladie correspond à 100 % du salaire sans aucune diminution progressive.
+    </p>
+
+    <h2>L'assurance pension : le système de retraite</h2>
+    <p>
+      L'assurance pension est le poste de cotisation le plus important pour le salarié, avec un taux de 8 % du salaire brut plafonné. L'employeur cotise également à 8 %, et l'État apporte un complément de 8 %, pour un financement tripartite unique en Europe. Ce financement à parts égales entre les trois acteurs est un pilier du modèle social luxembourgeois.
+    </p>
+
+    <h3>Fonctionnement du régime de pension</h3>
+    <p>
+      Le régime de pension luxembourgeois est un régime par répartition avec réserves. Les cotisations des actifs financent les pensions des retraités actuels, tandis qu'une réserve de compensation (actuellement supérieure à 25 milliards d'euros) garantit la soutenabilité du système à moyen terme.
+    </p>
+    <p>
+      La pension est calculée selon une formule qui prend en compte deux éléments principaux : les majorations proportionnelles (basées sur les revenus cotisés tout au long de la carrière) et les majorations forfaitaires (basées sur la durée d'affiliation, indépendamment du niveau de revenu). La formule de calcul est la suivante :
+    </p>
+    <ul>
+      <li><strong>Majorations proportionnelles :</strong> 1,85 % de la somme des salaires cotisés (revalorisés) pour chaque année d'affiliation.</li>
+      <li><strong>Majorations forfaitaires :</strong> un montant fixe par année d'affiliation (environ 28 € par mois par année en 2026).</li>
+      <li><strong>Pension minimum :</strong> 2 115,04 € brut par mois pour une carrière complète de 40 ans d'affiliation.</li>
+      <li><strong>Pension maximum :</strong> plafonnée au quintuple du montant de référence, soit environ 10 575 € brut par mois.</li>
+    </ul>
+
+    <h3>Conditions de départ à la retraite</h3>
+    <p>
+      L'âge légal de la retraite au Luxembourg est de 65 ans, avec une possibilité de retraite anticipée :
+    </p>
+    <ul>
+      <li><strong>Retraite anticipée à 60 ans :</strong> accessible aux assurés justifiant d'au moins 480 mois (40 ans) de périodes d'assurance effectives (cotisations obligatoires).</li>
+      <li><strong>Retraite anticipée à 57 ans :</strong> accessible aux assurés justifiant d'au moins 480 mois de périodes d'assurance dont 120 mois de périodes d'assurance obligatoire continue.</li>
+    </ul>
+    <p>
+      Le taux de remplacement (rapport entre la pension et le dernier salaire) est parmi les plus élevés d'Europe : environ 72 % pour une carrière complète de 40 ans au salaire moyen. Ce taux généreux est rendu possible par le financement tripartite et la réserve de compensation.
+    </p>
+
+    <h2>L'assurance dépendance</h2>
+    <p>
+      L'assurance dépendance, instaurée par la loi du 19 juin 1998, couvre les prestations liées à la perte d'autonomie. Elle est financée par une cotisation de 1,4 % du revenu total du salarié, sans plafond. Contrairement aux cotisations maladie et pension, la cotisation dépendance s'applique sur l'intégralité du salaire brut, et pas uniquement sur la portion inférieure au plafond.
+    </p>
+    <p>
+      Cette particularité fait que la cotisation dépendance est le seul poste de cotisation qui augmente proportionnellement avec le salaire, sans limite. Pour un salarié gagnant 20 000 € brut par mois, la cotisation dépendance s'élève à 280 € par mois, tandis que les cotisations maladie et pension restent calculées sur la base du plafond de 13 311,69 €.
+    </p>
+
+    <h3>Prestations de l'assurance dépendance</h3>
+    <p>
+      L'assurance dépendance finance les aides et soins pour les personnes en situation de dépendance, qu'elles vivent à domicile ou en institution. Les prestations comprennent :
+    </p>
+    <ul>
+      <li>Les aides pour les actes essentiels de la vie (toilette, habillage, alimentation, mobilité).</li>
+      <li>Les activités de soutien (courses, ménage, préparation des repas).</li>
+      <li>Les conseils et formations pour les aidants familiaux.</li>
+      <li>Les aides techniques et adaptations du logement.</li>
+      <li>Les prestations en espèces pour les aidants familiaux non professionnels.</li>
+    </ul>
+
+    <h2>Exemples de calcul des cotisations sociales</h2>
+    <p>
+      Voici des exemples concrets de calcul des cotisations sociales pour différents niveaux de salaire brut mensuel en 2026 :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Salaire brut</th>
+          <th>Maladie (2,8 %)</th>
+          <th>Pension (8 %)</th>
+          <th>Dépendance (1,4 %)</th>
+          <th>Total cotisations</th>
+          <th>Taux effectif</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>3 000 €</td><td>84,00 €</td><td>240,00 €</td><td>42,00 €</td><td>366,00 €</td><td>12,20 %</td></tr>
+        <tr><td>5 000 €</td><td>140,00 €</td><td>400,00 €</td><td>70,00 €</td><td>610,00 €</td><td>12,20 %</td></tr>
+        <tr><td>8 000 €</td><td>224,00 €</td><td>640,00 €</td><td>112,00 €</td><td>976,00 €</td><td>12,20 %</td></tr>
+        <tr><td>13 311,69 €</td><td>372,73 €</td><td>1 064,94 €</td><td>186,36 €</td><td>1 624,03 €</td><td>12,20 %</td></tr>
+        <tr><td>15 000 €</td><td>372,73 €</td><td>1 064,94 €</td><td>210,00 €</td><td>1 647,67 €</td><td>10,98 %</td></tr>
+        <tr><td>20 000 €</td><td>372,73 €</td><td>1 064,94 €</td><td>280,00 €</td><td>1 717,67 €</td><td>8,59 %</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      On observe que le taux effectif de cotisations diminue au-delà du plafond de 13 311,69 € par mois. Pour un salarié gagnant 20 000 € brut, le taux effectif n'est plus que de 8,59 %, contre 12,20 % pour un salaire inférieur au plafond. Cette dégressivité est souvent critiquée comme régressive, mais elle est compensée par la progressivité de l'impôt sur le revenu.
+    </p>
+
+    <h2>Cotisations patronales</h2>
+    <p>
+      L'employeur verse des cotisations supplémentaires qui ne figurent pas sur le bulletin de paie du salarié mais qui augmentent le coût total du travail. Les principales cotisations patronales sont :
+    </p>
+    <ul>
+      <li><strong>Assurance maladie :</strong> 2,8 % du salaire brut plafonné (identique à la part salariale).</li>
+      <li><strong>Assurance pension :</strong> 8 % du salaire brut plafonné.</li>
+      <li><strong>Assurance accidents du travail :</strong> taux variable selon le secteur d'activité et la sinistralité de l'entreprise (de 0,5 % à 6 %).</li>
+      <li><strong>Santé au travail :</strong> environ 0,11 % du salaire brut plafonné.</li>
+      <li><strong>Mutualité des employeurs :</strong> cotisation finançant le maintien du salaire pendant les 77 premiers jours de maladie. Le taux varie selon la taille de l'entreprise et le secteur.</li>
+    </ul>
+    <p>
+      Au total, les charges patronales représentent environ 12 à 15 % du salaire brut, ce qui est relativement modéré comparé à des pays comme la France (environ 30 %) ou la Belgique (environ 25 %). Ce coût du travail modéré est l'un des facteurs d'attractivité du Luxembourg pour les entreprises.
+    </p>
+
+    <h2>Cotisations et frontaliers</h2>
+    <p>
+      Les travailleurs frontaliers (France, Belgique, Allemagne) cotisent aux mêmes taux que les résidents luxembourgeois. Ils bénéficient de la même couverture sociale et des mêmes prestations. L'affiliation au Luxembourg est exclusive : un frontalier affilié au Luxembourg ne cotise pas dans son pays de résidence (sauf si son télétravail dépasse 49,99 % du temps de travail, auquel cas il bascule dans le système de sécurité sociale de son pays de résidence).
+    </p>
+
+    <h2>FAQ - Cotisations sociales au Luxembourg</h2>
+
+    <details>
+      <summary><strong>Quel est le taux total de cotisations sociales pour un salarié au Luxembourg ?</strong></summary>
+      <p>
+        Le taux total est de 12,2 % du salaire brut : 2,8 % pour l'assurance maladie (CNS), 8 % pour la pension et 1,4 % pour la dépendance. Les cotisations maladie et pension sont plafonnées au quintuple du SSM (13 311,69 €/mois en 2026). Seule la cotisation dépendance n'est pas plafonnée et s'applique sur l'intégralité du salaire.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Comment fonctionne le plafond de cotisation au Luxembourg ?</strong></summary>
+      <p>
+        Le plafond de cotisation est fixé à 5 fois le salaire social minimum, soit 13 311,69 € par mois en 2026. Les cotisations maladie (2,8 %) et pension (8 %) ne sont prélevées que sur la portion du salaire inférieure ou égale à ce plafond. Au-delà, seule la cotisation dépendance (1,4 %) continue de s'appliquer. Le taux effectif de cotisations diminue donc pour les hauts salaires.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Que couvre l'assurance maladie luxembourgeoise (CNS) ?</strong></summary>
+      <p>
+        La CNS offre une couverture très complète : consultations médicales (remboursement à 88 %), hospitalisation (prise en charge quasi intégrale), médicaments (remboursement variable de 0 à 100 %), soins dentaires, kinésithérapie, maternité (20 semaines de congé avec maintien du salaire à 100 %) et indemnités de maladie (100 % du salaire pendant 78 semaines). La couverture s'étend à la famille du salarié.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Visualisez vos cotisations sociales en détail.</li>
+        <li><a href="/guides/classes-impot-luxembourg/" class="text-primary hover:underline font-medium">Guide : Classes d'impôt au Luxembourg</a> - L'impact de votre classe sur l'impôt.</li>
+        <li><a href="/guides/credit-impot-salarie/" class="text-primary hover:underline font-medium">Guide : Crédit d'impôt salarié (CIS)</a> - Le CIS qui réduit votre impôt.</li>
+        <li><a href="/guides/salaire-minimum-luxembourg/" class="text-primary hover:underline font-medium">Guide : Salaire minimum Luxembourg 2026</a> - Montants du SSM et plafond de cotisation.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Taux de cotisations, affiliation et recouvrement.</li>
+      <li><a href="https://cns.public.lu" target="_blank" rel="noopener noreferrer">Caisse nationale de santé (CNS)</a> - Prestations maladie-maternité et remboursements.</li>
+      <li><a href="https://guichet.public.lu/fr/citoyens/sante-social/securite-sociale/affiliation-desinscription/affiliation-salarie.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Affiliation sécurité sociale</a> - Démarches d'affiliation pour les salariés.</li>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Traitement fiscal des cotisations sociales.</li>
+    </ul>
+  </article>
+</Layout>

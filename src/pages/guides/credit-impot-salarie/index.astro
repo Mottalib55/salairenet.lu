@@ -1,0 +1,257 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Crédit d'impôt salarié (CIS) au Luxembourg 2026 : conditions, montants, calcul";
+const description = "Guide complet sur le crédit d'impôt salarié (CIS) au Luxembourg : montant de 696 € par an, conditions, dégressivité, impact sur le salaire net et exemples de calcul 2026.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Crédit d'impôt salarié (CIS)", "item": "https://salairenet.lu/guides/credit-impot-salarie/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le montant du crédit d'impôt salarié (CIS) en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le montant maximal du CIS en 2026 est de 696 € par an, soit 58 € par mois. Ce montant est accordé intégralement aux salariés dont le revenu imposable annuel est inférieur ou égal à 45 000 €. Au-delà, le CIS diminue progressivement (dégressivité) et s'annule totalement pour les revenus dépassant 85 000 € par an."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le CIS est-il versé automatiquement ou faut-il en faire la demande ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le CIS est appliqué automatiquement par l'employeur lors du calcul de la retenue d'impôt sur le salaire. Il figure sur la fiche de retenue d'impôt émise par l'ACD. Le salarié n'a aucune démarche à effectuer. Le crédit est déduit directement de l'impôt dû chaque mois, réduisant ainsi la retenue à la source."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les frontaliers bénéficient-ils du CIS ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le CIS est accordé à tous les salariés imposés au Luxembourg, qu'ils soient résidents ou frontaliers (France, Belgique, Allemagne). Le montant et les conditions de dégressivité sont identiques. Le CIS est automatiquement intégré dans le calcul de la retenue d'impôt par l'employeur luxembourgeois."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Crédit d'impôt salarié (CIS)</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Le crédit d'impôt salarié (CIS) au Luxembourg : guide complet 2026</h1>
+
+    <p>
+      Le crédit d'impôt salarié, communément désigné par son acronyme CIS, est un dispositif fiscal luxembourgeois qui réduit directement l'impôt sur le revenu des salariés. Instauré pour alléger la charge fiscale des travailleurs à revenu faible et moyen, le CIS constitue un élément important du calcul du salaire net au Luxembourg. En 2026, son montant maximal est de 696 € par an (58 € par mois), mais il diminue progressivement pour les revenus élevés selon un mécanisme de dégressivité. Ce guide explique en détail le fonctionnement du CIS, ses conditions d'attribution, le calcul de la dégressivité et son impact concret sur la fiche de paie.
+    </p>
+
+    <h2>Qu'est-ce que le crédit d'impôt salarié ?</h2>
+    <p>
+      Le CIS est un crédit d'impôt, c'est-à-dire une somme directement déduite de l'impôt sur le revenu dû par le salarié. À la différence d'une déduction fiscale (qui réduit le revenu imposable), le crédit d'impôt réduit le montant de l'impôt lui-même, euro pour euro. Le CIS peut ramener l'impôt à zéro mais ne peut pas générer un remboursement : si l'impôt dû est inférieur au CIS, le salarié ne paie simplement pas d'impôt, sans recevoir de complément.
+    </p>
+    <p>
+      Le CIS est prévu par l'article 139ter de la loi modifiée du 4 décembre 1967 concernant l'impôt sur le revenu (L.I.R.). Il est accordé à tous les salariés et pensionnés imposés au Luxembourg, qu'ils soient résidents ou non-résidents (frontaliers). Les indépendants ne bénéficient pas du CIS mais disposent d'un crédit d'impôt spécifique (CI indépendant).
+    </p>
+
+    <h2>Montant du CIS en 2026</h2>
+    <p>
+      Le montant du CIS dépend du revenu imposable annuel du salarié. Trois plages de revenus déterminent le montant applicable :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Revenu imposable annuel</th>
+          <th>Montant du CIS annuel</th>
+          <th>CIS mensuel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jusqu'à 45 000 €</td><td>696 € (montant maximal)</td><td>58,00 €</td></tr>
+        <tr><td>De 45 001 € à 85 000 €</td><td>Dégressif (696 € diminuant progressivement)</td><td>Variable</td></tr>
+        <tr><td>Au-delà de 85 000 €</td><td>0 €</td><td>0 €</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Formule de dégressivité</h3>
+    <p>
+      Pour les revenus imposables compris entre 45 000 € et 85 000 € par an, le CIS est réduit selon la formule suivante :
+    </p>
+    <p>
+      <strong>CIS = 696 − (696 × (revenu imposable − 45 000) / 40 000)</strong>
+    </p>
+    <p>
+      Cette formule linéaire signifie que le CIS diminue de 17,40 € pour chaque tranche de 1 000 € de revenu imposable au-delà de 45 000 €. À 65 000 € de revenu imposable, le CIS est réduit de moitié (348 € par an). À 85 000 €, il atteint zéro.
+    </p>
+
+    <h3>Exemples de calcul du CIS</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Revenu imposable annuel</th>
+          <th>CIS annuel</th>
+          <th>CIS mensuel</th>
+          <th>Commentaire</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>30 000 €</td><td>696,00 €</td><td>58,00 €</td><td>Montant maximal</td></tr>
+        <tr><td>45 000 €</td><td>696,00 €</td><td>58,00 €</td><td>Seuil de dégressivité</td></tr>
+        <tr><td>50 000 €</td><td>609,00 €</td><td>50,75 €</td><td>Début de réduction</td></tr>
+        <tr><td>60 000 €</td><td>435,00 €</td><td>36,25 €</td><td>Réduction significative</td></tr>
+        <tr><td>70 000 €</td><td>261,00 €</td><td>21,75 €</td><td>Réduction importante</td></tr>
+        <tr><td>80 000 €</td><td>87,00 €</td><td>7,25 €</td><td>Presque nul</td></tr>
+        <tr><td>85 000 €</td><td>0,00 €</td><td>0,00 €</td><td>CIS supprimé</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Comment le CIS est-il appliqué ?</h2>
+    <p>
+      Le CIS est appliqué automatiquement par l'employeur lors du calcul de la retenue d'impôt mensuelle. Il figure sur la fiche de retenue d'impôt émise par l'Administration des Contributions Directes (ACD) et transmise électroniquement à l'employeur. Le salarié n'a aucune démarche à effectuer pour en bénéficier.
+    </p>
+    <p>
+      Concrètement, chaque mois, l'employeur calcule l'impôt brut dû selon le barème et la classe d'imposition du salarié, puis déduit le CIS mensuel du montant de l'impôt. Le résultat est la retenue d'impôt nette figurant sur le bulletin de paie. Si le CIS est supérieur à l'impôt brut dû, la retenue est ramenée à zéro (pas de versement au salarié).
+    </p>
+
+    <h3>Exemple pratique sur le bulletin de paie</h3>
+    <p>
+      Prenons l'exemple d'un salarié en classe 1, célibataire sans enfant, avec un salaire brut mensuel de 4 000 €.
+    </p>
+    <ul>
+      <li>Salaire brut : 4 000,00 €</li>
+      <li>Cotisations sociales (12,2 %) : -488,00 €</li>
+      <li>Revenu imposable mensuel (après forfaits) : environ 3 427,00 €</li>
+      <li>Impôt brut (barème classe 1) : environ 378,00 €</li>
+      <li>CIS mensuel : -58,00 €</li>
+      <li>Impôt net retenu : 320,00 €</li>
+      <li><strong>Salaire net : environ 3 192,00 €</strong></li>
+    </ul>
+    <p>
+      Sans le CIS, l'impôt retenu serait de 378 € au lieu de 320 €, soit une différence de 58 € par mois. Sur une année, le CIS représente une économie de 696 € pour ce salarié.
+    </p>
+
+    <h2>CIS et classes d'imposition</h2>
+    <p>
+      Le CIS est accordé indépendamment de la classe d'imposition. Un salarié en classe 1, 1a ou 2 bénéficie du même CIS, pour autant que son revenu imposable se situe dans les seuils applicables. Toutefois, en classe 2 (splitting), le revenu imposable pris en compte pour le calcul de la dégressivité est le revenu divisé par deux. Cela signifie qu'un couple en classe 2 avec un revenu global de 90 000 € (45 000 € par part) bénéficie du CIS maximal de 696 €, alors qu'un célibataire en classe 1 avec le même revenu de 90 000 € ne bénéficie d'aucun CIS.
+    </p>
+    <p>
+      Pour les couples en classe 2, chaque conjoint salarié a droit à son propre CIS. Si les deux conjoints travaillent, le ménage peut bénéficier de deux CIS, soit un maximum de 1 392 € par an. La dégressivité s'applique en fonction du revenu imposable par part (revenu global divisé par deux).
+    </p>
+
+    <h2>CIS pour les pensionnés</h2>
+    <p>
+      Les pensionnés (retraités) bénéficient également d'un crédit d'impôt, appelé crédit d'impôt pensionné (CIP). Son montant et ses seuils de dégressivité sont identiques à ceux du CIS : 696 € par an, dégressif entre 45 000 € et 85 000 € de revenu imposable. Le CIP est déduit de la retenue d'impôt sur la pension.
+    </p>
+    <p>
+      Un contribuable qui perçoit à la fois un salaire et une pension bénéficie du CIS sur son salaire et du CIP sur sa pension, mais le cumul est limité. L'ACD ajuste les fiches de retenue pour éviter un double avantage excessif.
+    </p>
+
+    <h2>Historique et évolution du CIS</h2>
+    <p>
+      Le CIS a été introduit dans le système fiscal luxembourgeois pour compenser la suppression de certains abattements forfaitaires et pour cibler l'allégement fiscal sur les revenus faibles et moyens. Son montant a été revalorisé à plusieurs reprises :
+    </p>
+    <ul>
+      <li><strong>2009-2016 :</strong> montant initial de 300 € par an, avec des seuils de dégressivité plus bas.</li>
+      <li><strong>2017 :</strong> augmentation à 600 € par an dans le cadre de la réforme fiscale.</li>
+      <li><strong>2019-2023 :</strong> ajustements progressifs du montant et des seuils.</li>
+      <li><strong>2024-2026 :</strong> montant porté à 696 € par an avec les seuils actuels de 45 000 € et 85 000 €.</li>
+    </ul>
+    <p>
+      Le CIS est indexé sur l'évolution du barème fiscal et peut être revalorisé par le législateur dans le cadre des lois de finances annuelles. Son montant relativement modeste (58 € par mois) en fait un outil de redistribution limité, mais son impact est significatif pour les salariés à revenu moyen dont l'impôt est faible.
+    </p>
+
+    <h2>Impact du CIS selon le niveau de salaire</h2>
+    <p>
+      L'impact relatif du CIS diminue avec le niveau de salaire. Pour un salarié au SSM (environ 2 662 € brut), le CIS représente une réduction d'impôt considérable, pouvant absorber la quasi-totalité de l'impôt dû. Pour un salarié gagnant 7 000 € brut, le CIS ne représente plus qu'une fraction modeste de l'impôt total.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Salaire brut mensuel</th>
+          <th>Impôt avant CIS</th>
+          <th>CIS mensuel</th>
+          <th>Impôt après CIS</th>
+          <th>Réduction en %</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>2 662 € (SSM)</td><td>~30 €</td><td>58 €</td><td>0 €</td><td>100 %</td></tr>
+        <tr><td>3 500 €</td><td>~195 €</td><td>58 €</td><td>~137 €</td><td>30 %</td></tr>
+        <tr><td>5 000 €</td><td>~418 €</td><td>58 €</td><td>~360 €</td><td>14 %</td></tr>
+        <tr><td>7 000 €</td><td>~850 €</td><td>~45 €</td><td>~805 €</td><td>5 %</td></tr>
+        <tr><td>10 000 €</td><td>~1 580 €</td><td>~10 €</td><td>~1 570 €</td><td>1 %</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Ce tableau montre que le CIS remplit bien sa fonction redistributive : il bénéficie proportionnellement davantage aux salariés à revenu modeste. Pour le salarié au SSM, le CIS annule intégralement l'impôt. Pour un salarié à 10 000 € brut, le CIS ne représente plus qu'une réduction marginale de 1 %.
+    </p>
+
+    <h2>CIS et déclaration d'impôt annuelle</h2>
+    <p>
+      Le CIS est pris en compte dans la retenue mensuelle à la source, mais il fait également l'objet d'un recalcul lors de la déclaration d'impôt annuelle (modèle 100). Si le salarié dépose une déclaration, l'ACD recalcule le CIS sur la base du revenu imposable annuel définitif et ajuste le montant. Un éventuel complément de CIS est remboursé au contribuable, ou un excédent de CIS perçu pendant l'année est réclamé.
+    </p>
+    <p>
+      Les salariés qui ne déposent pas de déclaration annuelle conservent le CIS tel qu'il a été appliqué mensuellement par l'employeur. Il est généralement recommandé de déposer une déclaration annuelle lorsque le salarié dispose de déductions supplémentaires (intérêts d'emprunt, prévoyance-vieillesse, dons) qui pourraient réduire davantage l'impôt.
+    </p>
+
+    <h2>FAQ - Crédit d'impôt salarié (CIS)</h2>
+
+    <details>
+      <summary><strong>Quel est le montant du crédit d'impôt salarié (CIS) en 2026 ?</strong></summary>
+      <p>
+        Le montant maximal du CIS en 2026 est de 696 € par an, soit 58 € par mois. Ce montant est accordé intégralement aux salariés dont le revenu imposable annuel ne dépasse pas 45 000 €. Entre 45 000 € et 85 000 €, le CIS diminue progressivement selon une formule linéaire. Au-delà de 85 000 € de revenu imposable, le CIS est nul.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Le CIS est-il versé automatiquement ou faut-il en faire la demande ?</strong></summary>
+      <p>
+        Le CIS est appliqué automatiquement par l'employeur lors du calcul de la retenue d'impôt mensuelle. Il figure sur la fiche de retenue d'impôt émise par l'ACD et transmise à l'employeur. Le salarié n'a aucune démarche à effectuer. Le crédit est déduit directement de l'impôt dû chaque mois, réduisant la retenue à la source visible sur le bulletin de paie.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Les frontaliers bénéficient-ils du CIS ?</strong></summary>
+      <p>
+        Oui, le CIS est accordé à tous les salariés imposés au Luxembourg, qu'ils soient résidents ou frontaliers (France, Belgique, Allemagne). Le montant et les conditions de dégressivité sont strictement identiques. Le CIS est automatiquement intégré dans le calcul de la retenue d'impôt par l'employeur luxembourgeois.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Visualisez l'impact du CIS sur votre salaire net.</li>
+        <li><a href="/guides/classes-impot-luxembourg/" class="text-primary hover:underline font-medium">Guide : Classes d'impôt au Luxembourg</a> - Impact des classes sur le calcul de l'impôt et du CIS.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales</a> - Les prélèvements sociaux avant l'impôt.</li>
+        <li><a href="/guides/optimiser-salaire-net-luxembourg/" class="text-primary hover:underline font-medium">Guide : Optimiser son salaire net</a> - Combinaison du CIS avec d'autres déductions.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Barème d'imposition et crédits d'impôt en vigueur.</li>
+      <li><a href="https://guichet.public.lu/fr/citoyens/impots-taxes/activite-salariee/imposition-salaire/credit-impot-salarie.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Crédit d'impôt salarié</a> - Conditions et montants officiels du CIS.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Cotisations sociales déductibles avant calcul de l'impôt.</li>
+    </ul>
+  </article>
+</Layout>

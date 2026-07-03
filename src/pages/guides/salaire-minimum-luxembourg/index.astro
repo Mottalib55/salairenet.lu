@@ -1,0 +1,286 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Salaire minimum Luxembourg 2026 : montants qualifié et non qualifié - Guide complet";
+const description = "Guide complet sur le salaire minimum au Luxembourg en 2026 : SSM qualifié (3 194,81 €) et non qualifié (2 662,34 €), indexation, historique, comparaison européenne et calcul du net.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Salaire minimum Luxembourg 2026", "item": "https://salairenet.lu/guides/salaire-minimum-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quel est le salaire minimum au Luxembourg en 2026 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le salaire social minimum (SSM) non qualifié au Luxembourg est de 2 662,34 € brut par mois au 1er janvier 2026 pour un travailleur de 18 ans et plus à temps plein (40 heures par semaine). Le SSM qualifié, majoré de 20 %, est de 3 194,81 € brut par mois. Ces montants sont indexés sur l'évolution du coût de la vie."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence entre le SSM qualifié et non qualifié ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le SSM qualifié est supérieur de 20 % au SSM non qualifié. Il s'applique aux travailleurs détenteurs d'un certificat d'aptitude technique et professionnelle (CATP), d'un diplôme d'aptitude professionnelle (DAP) ou d'un diplôme équivalent reconnu. Le SSM non qualifié s'applique aux travailleurs de 18 ans et plus sans qualification reconnue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne l'indexation du salaire minimum au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le salaire minimum est indexé sur l'évolution du coût de la vie via le mécanisme d'indexation automatique. Lorsque l'indice des prix à la consommation augmente de 2,5 % par rapport au dernier seuil de déclenchement, tous les salaires (dont le SSM) sont automatiquement majorés de 2,5 %. Cette indexation est unique en Europe et protège le pouvoir d'achat."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Salaire minimum Luxembourg 2026</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Salaire minimum au Luxembourg en 2026 : guide complet</h1>
+
+    <p>
+      Le Luxembourg détient le salaire minimum le plus élevé de l'Union européenne. Le salaire social minimum (SSM), tel qu'il est officiellement désigné, garantit un revenu plancher à tous les salariés travaillant sur le territoire luxembourgeois, qu'ils soient résidents ou frontaliers. En 2026, le SSM non qualifié s'établit à 2 662,34 € brut par mois et le SSM qualifié à 3 194,81 € brut par mois. Ce guide détaille les montants, les conditions d'application, le mécanisme d'indexation, le calcul du salaire net au SSM et la comparaison avec les pays voisins.
+    </p>
+
+    <h2>Les montants du SSM en 2026</h2>
+    <p>
+      Le salaire social minimum au Luxembourg se décline en plusieurs niveaux selon l'âge et la qualification du travailleur. Les montants mensuels bruts au 1<sup>er</sup> janvier 2026 pour un emploi à temps plein (40 heures par semaine) sont les suivants :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>SSM mensuel brut</th>
+          <th>SSM horaire brut</th>
+          <th>SSM annuel brut (12 mois)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Non qualifié (18 ans et plus)</td><td>2 662,34 €</td><td>15,36 €</td><td>31 948,08 €</td></tr>
+        <tr><td>Qualifié (18 ans et plus)</td><td>3 194,81 €</td><td>18,43 €</td><td>38 337,72 €</td></tr>
+        <tr><td>Non qualifié (17-18 ans)</td><td>2 129,87 € (80 %)</td><td>12,29 €</td><td>25 558,44 €</td></tr>
+        <tr><td>Non qualifié (15-17 ans)</td><td>1 996,76 € (75 %)</td><td>11,52 €</td><td>23 961,12 €</td></tr>
+      </tbody>
+    </table>
+
+    <h3>SSM qualifié : conditions d'éligibilité</h3>
+    <p>
+      Le SSM qualifié (majoré de 20 % par rapport au non qualifié) s'applique aux travailleurs qui détiennent un diplôme ou certificat reconnu correspondant à leur emploi. Les qualifications prises en compte sont :
+    </p>
+    <ul>
+      <li>Le Certificat d'aptitude technique et professionnelle (CATP) luxembourgeois.</li>
+      <li>Le Diplôme d'aptitude professionnelle (DAP), qui a remplacé le CATP depuis la réforme de la formation professionnelle.</li>
+      <li>Un diplôme ou certificat étranger reconnu comme équivalent par le ministère de l'Éducation nationale.</li>
+      <li>Un diplôme de technicien (DT) ou un diplôme de l'enseignement supérieur.</li>
+    </ul>
+    <p>
+      L'employeur est tenu de vérifier la qualification du salarié lors de l'embauche et d'appliquer le SSM qualifié si les conditions sont remplies. En cas de litige, le salarié peut saisir l'Inspection du travail et des mines (ITM) pour faire valoir son droit au SSM qualifié.
+    </p>
+
+    <h3>SSM et temps partiel</h3>
+    <p>
+      Pour un salarié à temps partiel, le SSM est proratisé en fonction du nombre d'heures contractuelles. Par exemple, un salarié travaillant 20 heures par semaine (mi-temps) au SSM non qualifié percevra 2 662,34 × 20/40 = 1 331,17 € brut par mois. Le taux horaire reste identique au taux à temps plein.
+    </p>
+
+    <h2>Le mécanisme d'indexation automatique</h2>
+    <p>
+      Le Luxembourg est l'un des rares pays européens à disposer d'un mécanisme d'indexation automatique des salaires sur le coût de la vie. Ce système, instauré en 1921, s'applique à l'ensemble des salaires, traitements et pensions, dont le SSM.
+    </p>
+
+    <h3>Fonctionnement de l'indexation</h3>
+    <p>
+      L'indice des prix à la consommation est calculé chaque mois par le STATEC (Institut national de la statistique et des études économiques). Lorsque la moyenne semestrielle mobile de l'indice dépasse de 2,5 % le dernier seuil de déclenchement, une tranche indiciaire est déclenchée. Tous les salaires, y compris le SSM, sont alors automatiquement majorés de 2,5 % le mois suivant le déclenchement.
+    </p>
+    <p>
+      Ce mécanisme protège le pouvoir d'achat des salariés contre l'inflation. En période de forte inflation (comme en 2022-2023), les tranches indiciaires se déclenchent plus fréquemment, avec parfois deux tranches dans la même année. En période de faible inflation, les tranches sont plus espacées (parfois 2 à 3 ans entre deux déclenchements).
+    </p>
+
+    <h3>Historique des indexations récentes</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date de déclenchement</th>
+          <th>SSM non qualifié après indexation</th>
+          <th>Variation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Janvier 2024</td><td>2 570,93 €</td><td>+2,5 %</td></tr>
+        <tr><td>Septembre 2024</td><td>2 635,20 €</td><td>+2,5 %</td></tr>
+        <tr><td>Janvier 2025</td><td>2 637,06 €</td><td>Revalorisation structurelle</td></tr>
+        <tr><td>Avril 2025</td><td>2 662,34 €</td><td>+2,5 % (indexation)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Du brut au net : le salaire net au SSM</h2>
+    <p>
+      Le passage du salaire brut au salaire net pour un salarié au SSM illustre bien le fonctionnement du système de prélèvements luxembourgeois. Voici le calcul détaillé pour un salarié au SSM non qualifié (2 662,34 €) en classe 1, célibataire sans enfant :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Poste</th>
+          <th>Montant mensuel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Salaire brut</td><td>2 662,34 €</td></tr>
+        <tr><td>Cotisation maladie (2,8 %)</td><td>-74,55 €</td></tr>
+        <tr><td>Cotisation pension (8 %)</td><td>-212,99 €</td></tr>
+        <tr><td>Cotisation dépendance (1,4 %)</td><td>-37,27 €</td></tr>
+        <tr><td><strong>Total cotisations sociales</strong></td><td><strong>-324,81 €</strong></td></tr>
+        <tr><td>Revenu imposable mensuel (après forfaits)</td><td>~2 252,53 €</td></tr>
+        <tr><td>Impôt brut (barème classe 1)</td><td>~35,00 €</td></tr>
+        <tr><td>CIS mensuel</td><td>-58,00 €</td></tr>
+        <tr><td>Impôt net retenu</td><td>0,00 €</td></tr>
+        <tr><td><strong>Salaire net</strong></td><td><strong>~2 337,53 €</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Un salarié au SSM non qualifié en classe 1 perçoit un salaire net d'environ 2 337 € par mois. L'impôt est nul grâce au CIS qui absorbe la totalité de l'impôt dû. Le taux effectif de prélèvement est donc de 12,2 % (cotisations sociales uniquement), ce qui laisse au salarié 87,8 % de son salaire brut.
+    </p>
+
+    <h3>Salaire net au SSM selon la classe d'imposition</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Classe</th>
+          <th>SSM brut</th>
+          <th>Cotisations</th>
+          <th>Impôt net</th>
+          <th>Salaire net</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Classe 1</td><td>2 662,34 €</td><td>324,81 €</td><td>0 €</td><td>~2 337 €</td></tr>
+        <tr><td>Classe 1a</td><td>2 662,34 €</td><td>324,81 €</td><td>0 €</td><td>~2 337 €</td></tr>
+        <tr><td>Classe 2</td><td>2 662,34 €</td><td>324,81 €</td><td>0 €</td><td>~2 337 €</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Au niveau du SSM, la classe d'imposition n'a aucun impact sur le salaire net car l'impôt est nul dans toutes les classes grâce au CIS. La différence entre les classes ne se manifeste qu'à partir d'un salaire brut d'environ 3 500 € par mois.
+    </p>
+
+    <h2>Le SSM dans le contexte européen</h2>
+    <p>
+      Le Luxembourg dispose du salaire minimum le plus élevé de l'Union européenne en valeur absolue. Voici une comparaison avec les pays voisins et les principaux pays européens en 2026 :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Pays</th>
+          <th>Salaire minimum mensuel brut</th>
+          <th>Rapport au SSM luxembourgeois</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Luxembourg</strong></td><td><strong>2 662 €</strong></td><td><strong>100 %</strong></td></tr>
+        <tr><td>Irlande</td><td>~2 146 €</td><td>81 %</td></tr>
+        <tr><td>Pays-Bas</td><td>~2 070 €</td><td>78 %</td></tr>
+        <tr><td>Belgique</td><td>~2 030 €</td><td>76 %</td></tr>
+        <tr><td>Allemagne</td><td>~2 054 €</td><td>77 %</td></tr>
+        <tr><td>France</td><td>~1 802 €</td><td>68 %</td></tr>
+        <tr><td>Espagne</td><td>~1 323 €</td><td>50 %</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      En parité de pouvoir d'achat, l'avantage du SSM luxembourgeois est réduit en raison du coût de la vie élevé au Luxembourg (notamment le logement). Néanmoins, le pouvoir d'achat au SSM luxembourgeois reste supérieur à celui des pays voisins, en particulier pour les frontaliers qui bénéficient du salaire luxembourgeois tout en vivant dans un pays où le coût de la vie est inférieur.
+    </p>
+
+    <h2>Le SSM et le plafond de cotisation</h2>
+    <p>
+      Le SSM sert de base au calcul du plafond de cotisation sociale. Le plafond est fixé au quintuple du SSM non qualifié, soit 5 × 2 662,34 = 13 311,69 € par mois en 2026. Ce plafond détermine le montant maximum sur lequel les cotisations maladie (2,8 %) et pension (8 %) sont calculées. Toute hausse du SSM entraîne donc automatiquement une hausse du plafond de cotisation.
+    </p>
+
+    <h2>Obligations de l'employeur</h2>
+    <p>
+      L'employeur est légalement tenu de verser au minimum le SSM à tout salarié travaillant au Luxembourg. Le non-respect de cette obligation constitue une infraction passible d'une amende de 251 € à 25 000 € par salarié concerné. L'Inspection du travail et des mines (ITM) est compétente pour contrôler le respect du SSM et sanctionner les employeurs en infraction.
+    </p>
+    <p>
+      L'employeur doit également appliquer le SSM qualifié aux salariés détenteurs d'une qualification reconnue. En cas de doute sur la qualification, le salarié peut demander la reconnaissance de son diplôme auprès du ministère de l'Éducation nationale ou du Service de reconnaissance des diplômes.
+    </p>
+
+    <h2>Évolution historique du SSM</h2>
+    <p>
+      Le SSM luxembourgeois a connu une progression régulière au fil des décennies, portée par les indexations automatiques et les revalorisations structurelles décidées par le gouvernement. Voici les étapes marquantes :
+    </p>
+    <ul>
+      <li><strong>2000 :</strong> le SSM non qualifié s'établissait à environ 1 259 € par mois.</li>
+      <li><strong>2010 :</strong> le SSM non qualifié atteignait environ 1 682 € par mois.</li>
+      <li><strong>2015 :</strong> le SSM non qualifié était d'environ 1 923 € par mois.</li>
+      <li><strong>2020 :</strong> le SSM non qualifié s'établissait à 2 141,99 € par mois.</li>
+      <li><strong>2023 :</strong> revalorisation structurelle à 2 387,40 €, plus indexation.</li>
+      <li><strong>2026 :</strong> le SSM non qualifié atteint 2 662,34 € par mois.</li>
+    </ul>
+    <p>
+      En 26 ans, le SSM a plus que doublé en valeur nominale. En valeur réelle (corrigée de l'inflation), la progression est plus modeste mais reste positive, grâce notamment aux revalorisations structurelles qui vont au-delà de la simple indexation.
+    </p>
+
+    <h2>FAQ - Salaire minimum Luxembourg</h2>
+
+    <details>
+      <summary><strong>Quel est le salaire minimum au Luxembourg en 2026 ?</strong></summary>
+      <p>
+        Le SSM non qualifié est de 2 662,34 € brut par mois pour un travailleur de 18 ans et plus à temps plein (40 heures/semaine). Le SSM qualifié est majoré de 20 %, soit 3 194,81 € brut par mois. Le taux horaire non qualifié est de 15,36 € et le qualifié de 18,43 €. Ces montants sont applicables au 1<sup>er</sup> janvier 2026.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Quelle est la différence entre le SSM qualifié et non qualifié ?</strong></summary>
+      <p>
+        Le SSM qualifié est 20 % plus élevé que le non qualifié. Il s'applique aux travailleurs détenteurs d'un CATP, DAP ou diplôme équivalent reconnu, dans un emploi correspondant à leur qualification. Le SSM non qualifié s'applique à tous les autres travailleurs de 18 ans et plus. Les travailleurs de 15-17 ans perçoivent 75 % du SSM et ceux de 17-18 ans 80 %.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Comment fonctionne l'indexation du salaire minimum au Luxembourg ?</strong></summary>
+      <p>
+        Le SSM est indexé sur le coût de la vie. Lorsque l'indice des prix à la consommation augmente de 2,5 % par rapport au dernier seuil, une tranche indiciaire est déclenchée et tous les salaires (dont le SSM) sont majorés de 2,5 % automatiquement. Ce mécanisme unique en Europe protège le pouvoir d'achat contre l'inflation sans négociation syndicale.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Calculez votre net au salaire minimum.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales</a> - Les cotisations prélevées sur le SSM.</li>
+        <li><a href="/guides/credit-impot-salarie/" class="text-primary hover:underline font-medium">Guide : Crédit d'impôt salarié (CIS)</a> - Le CIS qui annule l'impôt au SSM.</li>
+        <li><a href="/guides/optimiser-salaire-net-luxembourg/" class="text-primary hover:underline font-medium">Guide : Optimiser son salaire net</a> - Maximiser votre rémunération nette.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://guichet.public.lu/fr/entreprises/ressources-humaines/remuneration/fixation-salaires/salaire-social-minimum.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Salaire social minimum</a> - Montants officiels et conditions d'application.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Plafond de cotisation basé sur le SSM.</li>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Barème fiscal applicable au SSM.</li>
+      <li><a href="https://statistiques.public.lu" target="_blank" rel="noopener noreferrer">STATEC</a> - Indice des prix à la consommation et déclenchement des tranches indiciaires.</li>
+    </ul>
+  </article>
+</Layout>

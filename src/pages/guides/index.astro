@@ -1,0 +1,117 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const guides = [
+  {
+    slug: 'classes-impot-luxembourg',
+    title: 'Classes d\'impôt au Luxembourg',
+    description: 'Tout savoir sur les classes 1, 1a et 2 : conditions d\'attribution, impact sur le salaire net et optimisation fiscale.',
+    icon: '🏛️',
+  },
+  {
+    slug: 'frontalier-france-luxembourg',
+    title: 'Frontalier France-Luxembourg',
+    description: 'Fiscalité des travailleurs frontaliers français : convention fiscale, seuil de télétravail de 34 jours, déclaration.',
+    icon: '🇫🇷',
+  },
+  {
+    slug: 'frontalier-belgique-luxembourg',
+    title: 'Frontalier Belgique-Luxembourg',
+    description: 'Convention fiscale belgo-luxembourgeoise, règles d\'imposition, télétravail et sécurité sociale pour les frontaliers belges.',
+    icon: '🇧🇪',
+  },
+  {
+    slug: 'cotisations-sociales-luxembourg',
+    title: 'Cotisations sociales au Luxembourg',
+    description: 'Détail des cotisations CNS (2,8 %), pension (8 %), dépendance (1,4 %) : plafonds, calcul et couverture.',
+    icon: '🏥',
+  },
+  {
+    slug: 'credit-impot-salarie',
+    title: 'Crédit d\'impôt salarié (CIS)',
+    description: 'Conditions d\'attribution, montants 2026, dégressivité et impact du CIS sur votre fiche de paie.',
+    icon: '💳',
+  },
+  {
+    slug: 'treizieme-mois-luxembourg',
+    title: '13e mois au Luxembourg',
+    description: 'Le 13e mois est-il obligatoire ? Conventions collectives, calcul, fiscalité et impact sur le net.',
+    icon: '🎁',
+  },
+  {
+    slug: 'salaire-minimum-luxembourg',
+    title: 'Salaire minimum Luxembourg 2026',
+    description: 'Montants du SSM qualifié et non qualifié, indexation automatique, historique et comparaison européenne.',
+    icon: '📊',
+  },
+  {
+    slug: 'optimiser-salaire-net-luxembourg',
+    title: 'Optimiser son salaire net',
+    description: 'Déductions fiscales, avantages en nature, prévoyance-vieillesse : toutes les pistes pour maximiser votre net.',
+    icon: '🎯',
+  },
+];
+---
+
+<Layout
+  title="Guides salaire Luxembourg 2026 - Classes d'impôt, frontaliers, cotisations"
+  description="Guides complets sur le salaire au Luxembourg : classes d'impôt, cotisations sociales, frontaliers France et Belgique, CIS, 13e mois, SSM et optimisation fiscale."
+>
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Guides</li>
+    </ol>
+  </nav>
+
+  <div class="text-center max-w-3xl mx-auto mb-10">
+    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      Guides salaire Luxembourg 2026
+    </h1>
+    <p class="text-lg text-gray-600 leading-relaxed">
+      Retrouvez nos guides complets pour comprendre votre fiche de paie luxembourgeoise :
+      classes d'impôt, cotisations sociales, statut frontalier, crédit d'impôt salarié et
+      astuces d'optimisation.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+    {guides.map((guide) => (
+      <a
+        href={`/guides/${guide.slug}/`}
+        class="group block bg-white border border-border rounded-xl p-6 hover:border-primary hover:shadow-md transition-all duration-200"
+      >
+        <div class="text-3xl mb-3">{guide.icon}</div>
+        <h2 class="text-lg font-semibold text-gray-900 group-hover:text-primary transition-colors mb-2">
+          {guide.title}
+        </h2>
+        <p class="text-sm text-gray-600 mb-4 leading-relaxed">{guide.description}</p>
+        <span class="inline-flex items-center gap-1 text-sm font-medium text-primary group-hover:underline">
+          Lire le guide
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </a>
+    ))}
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://salairenet.lu/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Guides",
+        "item": "https://salairenet.lu/guides/"
+      }
+    ]
+  })} />
+</Layout>

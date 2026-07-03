@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "A propos", "item": "https://salairenet.lu/a-propos/" }
+  ]
+};
+---
+<Layout title="A propos - SalaireNet.lu" description="Decouvrez qui est derriere le calculateur de salaire brut-net au Luxembourg. Mottalib Radif, expert en technologie financiere.">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <nav class="text-sm text-gray-500 mb-8">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+      <li>/</li>
+      <li class="text-gray-800 font-medium">A propos</li>
+    </ol>
+  </nav>
+
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">A propos de SalaireNet.lu</h1>
+
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Qui sommes-nous ?</h2>
+      <div class="flex flex-col sm:flex-row gap-6">
+        <div class="flex-shrink-0">
+          <img src="/team/mottalib-radif.jpg" alt="Mottalib Radif" class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg" width="96" height="96" loading="eager" />
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-gray-800 mb-2">Mottalib Radif</h3>
+          <p class="text-sm text-teal-600 font-medium mb-3">MBA, INSEAD &middot; Passionné de finance personnelle au Luxembourg</p>
+          <p class="text-gray-600 mb-3">
+            Mottalib Radif est un developpeur specialise dans la conception d'outils numeriques pour la finance personnelle. Son expertise en developpement web et en fiscalite luxembourgeoise lui permet de creer des calculateurs precis et fiables. Il maitrise les mecanismes des cotisations sociales (assurance maladie, pension, dependance), le bareme d'imposition sur le revenu et les specificites des classes d'impot au Luxembourg.
+          </p>
+          <p class="text-gray-600">
+            Engage dans la democratisation de l'information fiscale, Mottalib concoit des outils gratuits et accessibles pour aider les residents et les frontaliers a comprendre leur fiche de paie et a estimer leur salaire net.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Pourquoi ce calculateur ?</h2>
+      <p class="text-gray-600 mb-4">
+        Le Luxembourg attire chaque jour plus de 200 000 travailleurs frontaliers venus de France, de Belgique et d'Allemagne. Pour ces salaries, comme pour les residents, comprendre le passage du salaire brut au salaire net est essentiel, mais la complexite du systeme fiscal luxembourgeois rend cet exercice difficile sans outil adapte.
+      </p>
+      <p class="text-gray-600 mb-4">
+        Ce calculateur a ete concu pour offrir une estimation rapide et detaillee de votre salaire net au Luxembourg. En renseignant votre salaire brut, votre classe d'impot et votre situation familiale, vous obtenez un decompte precis des cotisations sociales (assurance maladie, assurance pension, assurance dependance) et de l'impot sur le revenu retenu a la source (RTS).
+      </p>
+      <p class="text-gray-600">
+        Les baremes utilises sont ceux publies par l'Administration des Contributions Directes (ACD) et le Centre Commun de la Securite Sociale (CCSS) pour l'annee 2026. Les resultats sont indicatifs et peuvent varier en fonction de votre situation personnelle (deductions specifiques, credits d'impot, abattements). Pour un calcul exact, consultez votre comptable ou l'ACD.
+      </p>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Notre engagement</h2>
+      <ul class="space-y-3 text-gray-600">
+        <li class="flex items-start gap-3">
+          <span class="text-teal-500 mt-1 font-bold">1.</span>
+          <span><strong>Gratuite et independance</strong> : ce simulateur est entierement gratuit, sans publicite et sans collecte de donnees personnelles. Nous ne sommes affilies a aucun employeur, cabinet comptable ou fiduciaire.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-500 mt-1 font-bold">2.</span>
+          <span><strong>Baremes officiels</strong> : les taux de cotisations sociales et les baremes d'imposition sont issus des publications officielles de l'ACD et du CCSS. Ils sont mis a jour chaque annee.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-teal-500 mt-1 font-bold">3.</span>
+          <span><strong>Adapte aux frontaliers</strong> : notre calculateur prend en compte les specificites des travailleurs frontaliers, notamment en matiere de classe d'impot et de deductions applicables.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">Sources et references</h2>
+      <p class="text-gray-600 mb-4">
+        Les donnees utilisees proviennent de sources officielles luxembourgeoises : l'Administration des Contributions Directes (impotsdirects.public.lu) pour les baremes d'imposition et les classes d'impot, le Centre Commun de la Securite Sociale (ccss.lu) pour les taux de cotisations sociales, et le portail Guichet.lu pour les informations administratives generales.
+      </p>
+      <p class="text-gray-600">
+        Ce calculateur est un outil d'estimation et ne constitue pas un avis fiscal. Pour une situation complexe (revenus multiples, deductions specifiques, travail a temps partiel), nous vous recommandons de consulter un professionnel de la fiscalite luxembourgeoise ou de contacter directement l'ACD.
+      </p>
+    </section>
+  </div>
+</Layout>

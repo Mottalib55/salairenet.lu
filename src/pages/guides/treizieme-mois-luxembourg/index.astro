@@ -1,0 +1,246 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Le 13e mois au Luxembourg : calcul, conventions collectives et fiscalité - Guide 2026";
+const description = "Guide complet sur le 13e mois au Luxembourg : est-il obligatoire ? Calcul, conventions collectives, impact fiscal, cotisations sociales et exemples chiffrés 2026.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "13e mois au Luxembourg", "item": "https://salairenet.lu/guides/treizieme-mois-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Le 13e mois est-il obligatoire au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, le 13e mois n'est pas prévu par le Code du travail luxembourgeois. Son versement dépend de la convention collective applicable au secteur d'activité, du contrat de travail individuel ou d'un usage d'entreprise. En pratique, la grande majorité des conventions collectives au Luxembourg prévoient le versement d'une gratification de fin d'année équivalente à un mois de salaire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le 13e mois est-il soumis à l'impôt et aux cotisations sociales ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le 13e mois est intégralement soumis aux cotisations sociales (maladie 2,8 %, pension 8 %, dépendance 1,4 %) et à l'impôt sur le revenu, comme tout autre élément de rémunération. L'impôt est calculé selon la méthode de l'annualisation : le 13e mois est ajouté au revenu annuel, et l'impôt annuel total est recalculé. La retenue supplémentaire correspond à la différence."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment est calculé le 13e mois en cas de départ en cours d'année ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En cas de départ en cours d'année (démission ou licenciement), le 13e mois est généralement proratisé en fonction du nombre de mois travaillés dans l'année. Par exemple, un salarié quittant l'entreprise fin juin percevra 6/12 du 13e mois. Les conditions exactes de proratisation sont définies par la convention collective ou le contrat de travail."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">13e mois au Luxembourg</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Le 13e mois au Luxembourg : guide complet 2026</h1>
+
+    <p>
+      Le 13e mois, également appelé gratification de fin d'année ou prime de Noël, est une pratique très répandue au Luxembourg. Bien qu'il ne soit pas imposé par la loi, il constitue un élément de rémunération quasi systématique dans la plupart des secteurs d'activité. Le montant et les conditions de versement varient selon la convention collective applicable, le contrat de travail individuel ou les usages de l'entreprise. Ce guide détaille le cadre juridique du 13e mois au Luxembourg, son calcul, son traitement fiscal et social, et son impact sur le salaire net annuel.
+    </p>
+
+    <h2>Le cadre juridique du 13e mois au Luxembourg</h2>
+    <p>
+      Le Code du travail luxembourgeois ne prévoit pas le versement obligatoire d'un 13e mois de salaire. Contrairement à certains pays (comme l'Autriche ou le Portugal où le 13e mois est légalement garanti), le Luxembourg laisse cette question à la négociation collective et au contrat individuel. Le 13e mois est donc un avantage contractuel et non un droit légal universel.
+    </p>
+    <p>
+      Toutefois, dans la pratique, le 13e mois est très largement répandu au Luxembourg. La grande majorité des conventions collectives sectorielles prévoient le versement d'une gratification de fin d'année, et les entreprises qui ne sont pas couvertes par une convention collective l'incluent généralement dans le contrat de travail. Selon les estimations, plus de 85 % des salariés luxembourgeois perçoivent un 13e mois sous une forme ou une autre.
+    </p>
+
+    <h3>Les sources juridiques du 13e mois</h3>
+    <p>
+      Le droit au 13e mois peut découler de trois sources, par ordre de priorité :
+    </p>
+    <ul>
+      <li><strong>La convention collective de travail (CCT) :</strong> la source la plus fréquente. La convention collective applicable au secteur d'activité de l'entreprise prévoit généralement le versement d'une gratification de fin d'année, son montant, ses conditions d'ancienneté et les modalités de proratisation. La CCT s'impose à l'employeur et au salarié.</li>
+      <li><strong>Le contrat de travail individuel :</strong> en l'absence de convention collective ou en complément de celle-ci, le contrat de travail peut prévoir le versement d'un 13e mois. Les conditions sont celles convenues entre l'employeur et le salarié.</li>
+      <li><strong>L'usage d'entreprise :</strong> si l'employeur verse régulièrement un 13e mois pendant plusieurs années consécutives sans base conventionnelle ou contractuelle, cet usage peut devenir obligatoire. La jurisprudence luxembourgeoise reconnaît qu'un usage constant, fixe et général (appliqué à tous les salariés) crée un droit acquis pour les salariés.</li>
+    </ul>
+
+    <h2>Les conventions collectives et le 13e mois</h2>
+    <p>
+      De nombreuses conventions collectives luxembourgeoises prévoient le versement d'un 13e mois. Les principales sont :
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Secteur / Convention collective</th>
+          <th>Montant du 13e mois</th>
+          <th>Conditions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Banques et assurances</td><td>1 mois de salaire</td><td>Ancienneté de 6 mois minimum</td></tr>
+        <tr><td>Commerce</td><td>1 mois de salaire de base</td><td>Proratisation si moins d'un an</td></tr>
+        <tr><td>Industrie</td><td>Variable (souvent 1 mois)</td><td>Selon la convention spécifique</td></tr>
+        <tr><td>Construction (Bâtiment)</td><td>Gratification selon ancienneté</td><td>Montant progressif selon ancienneté</td></tr>
+        <tr><td>Horeca (hôtels/restaurants)</td><td>1 mois proratisé</td><td>Présence au 31/12</td></tr>
+        <tr><td>Nettoyage</td><td>Gratification selon ancienneté</td><td>Montant croissant avec l'ancienneté</td></tr>
+        <tr><td>Fonction publique</td><td>Allocation de fin d'année</td><td>Conditions spécifiques au statut</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Les conventions collectives sont négociées entre les syndicats (OGBL, LCGB principalement) et les organisations patronales. Elles sont déclarées d'obligation générale par arrêté grand-ducal, ce qui les rend applicables à toutes les entreprises du secteur, même celles qui ne sont pas membres de l'organisation patronale signataire.
+    </p>
+
+    <h2>Calcul du 13e mois</h2>
+    <p>
+      Le calcul du 13e mois dépend des dispositions de la convention collective ou du contrat de travail. Les modalités les plus courantes sont les suivantes :
+    </p>
+
+    <h3>13e mois = un mois de salaire de base</h3>
+    <p>
+      La formule la plus fréquente est le versement d'un mois de salaire de base brut. Le salaire de base est le salaire mensuel fixe, hors heures supplémentaires, primes ponctuelles, avantages en nature et autres éléments variables. Pour un salarié gagnant 5 000 € brut par mois, le 13e mois est de 5 000 € brut.
+    </p>
+
+    <h3>Proratisation en cas d'année incomplète</h3>
+    <p>
+      Lorsque le salarié n'a pas travaillé toute l'année civile (embauche en cours d'année, départ en cours d'année), le 13e mois est généralement proratisé. La formule de proratisation est :
+    </p>
+    <p>
+      <strong>13e mois proratisé = (salaire de base × nombre de mois complets travaillés) / 12</strong>
+    </p>
+    <p>
+      Par exemple, un salarié embauché le 1<sup>er</sup> avril avec un salaire de 5 000 € brut percevra un 13e mois de 5 000 × 9/12 = 3 750 € brut. Certaines conventions collectives prévoient une ancienneté minimale (souvent 3 ou 6 mois) pour ouvrir le droit au 13e mois proratisé.
+    </p>
+
+    <h3>Impact des absences sur le 13e mois</h3>
+    <p>
+      Les absences peuvent réduire le montant du 13e mois, mais les conditions varient selon la convention collective :
+    </p>
+    <ul>
+      <li><strong>Congé de maladie :</strong> la plupart des conventions collectives ne réduisent pas le 13e mois pour les absences de maladie couvertes par un certificat médical, du moins pendant la période de maintien du salaire (77 jours). Au-delà, certaines conventions prévoient une réduction.</li>
+      <li><strong>Congé de maternité :</strong> le congé de maternité est généralement assimilé à du temps de travail pour le calcul du 13e mois.</li>
+      <li><strong>Congé sans solde :</strong> les périodes de congé sans solde sont généralement déduites du calcul du 13e mois.</li>
+      <li><strong>Temps partiel :</strong> le 13e mois est proratisé en fonction du taux d'occupation du salarié (50 %, 80 %, etc.).</li>
+    </ul>
+
+    <h2>Traitement fiscal du 13e mois</h2>
+    <p>
+      Le 13e mois est un élément de rémunération imposable comme tout autre salaire. Il n'existe pas de régime fiscal spécifique ou favorable pour le 13e mois au Luxembourg. Les cotisations sociales et l'impôt sur le revenu sont calculés sur le montant total de la rémunération annuelle, 13e mois inclus.
+    </p>
+
+    <h3>Cotisations sociales sur le 13e mois</h3>
+    <p>
+      Le 13e mois est soumis aux cotisations sociales aux mêmes taux que le salaire mensuel ordinaire : 2,8 % pour l'assurance maladie, 8 % pour la pension et 1,4 % pour la dépendance. Le plafond de cotisation (5 × SSM) s'apprécie sur le mois de versement. Si le 13e mois est versé en même temps que le salaire de décembre, les cotisations sont calculées sur le total (salaire + 13e mois), avec application du plafond mensuel.
+    </p>
+    <p>
+      Cependant, pour le calcul annuel, l'ACD prend en compte le plafond annuel (159 740,28 € en 2026). Si le cumul des salaires mensuels et du 13e mois dépasse ce plafond annuel, un ajustement est effectué lors de la déclaration annuelle.
+    </p>
+
+    <h3>Impôt sur le revenu et 13e mois</h3>
+    <p>
+      L'impôt sur le 13e mois est calculé selon la méthode de l'annualisation. L'employeur additionne le 13e mois au revenu annuel total, calcule l'impôt annuel correspondant, puis soustrait l'impôt déjà retenu sur les 12 mois de salaire ordinaire. La différence constitue la retenue d'impôt sur le 13e mois. Cette méthode garantit que le taux marginal d'imposition est correctement appliqué.
+    </p>
+    <p>
+      Le mois de versement du 13e mois (généralement décembre) présente donc une retenue d'impôt plus élevée que les mois ordinaires. Pour un salarié en classe 1 gagnant 5 000 € brut par mois, l'impôt sur le 13e mois de 5 000 € sera d'environ 1 600 à 1 900 €, soit un taux marginal de 32 à 38 %. Ce taux élevé s'explique par le fait que le 13e mois vient se placer dans les tranches hautes du barème progressif.
+    </p>
+
+    <h3>Exemple chiffré complet</h3>
+    <p>
+      Prenons l'exemple d'un salarié en classe 1, célibataire sans enfant, avec un salaire brut mensuel de 5 000 € et un 13e mois de 5 000 € :
+    </p>
+    <ul>
+      <li>Salaire brut annuel : 12 × 5 000 + 5 000 = 65 000 €</li>
+      <li>Cotisations sociales annuelles : environ 7 930 €</li>
+      <li>Revenu imposable annuel : environ 56 050 €</li>
+      <li>Impôt annuel total (classe 1) : environ 10 650 €</li>
+      <li>CIS annuel : environ 507 € (dégressif car revenu > 45 000 €)</li>
+      <li>Impôt net annuel : environ 10 143 €</li>
+      <li><strong>Salaire net annuel : environ 46 927 €</strong></li>
+      <li><strong>Salaire net mensuel moyen : environ 3 610 €</strong></li>
+    </ul>
+    <p>
+      Sans le 13e mois, le salaire net annuel serait de 12 × 3 690 = 44 280 €. Le 13e mois de 5 000 € brut génère donc un net supplémentaire d'environ 2 647 €, soit un taux de prélèvement effectif de 47 % sur le 13e mois (cotisations + impôt). Ce taux élevé reflète la progressivité du barème luxembourgeois.
+    </p>
+
+    <h2>13e mois et primes : quelles différences ?</h2>
+    <p>
+      Le 13e mois se distingue des primes ponctuelles (prime de performance, prime exceptionnelle, bonus) par son caractère récurrent et contractuel. Cette distinction a des implications juridiques importantes :
+    </p>
+    <ul>
+      <li><strong>Caractère obligatoire :</strong> le 13e mois prévu par la convention collective ou le contrat de travail est un droit acquis du salarié. L'employeur ne peut pas le supprimer unilatéralement. Une prime discrétionnaire, en revanche, peut être supprimée d'une année sur l'autre.</li>
+      <li><strong>Base de calcul de l'indemnité de licenciement :</strong> le 13e mois entre dans la base de calcul de l'indemnité de départ (préavis de licenciement), car il fait partie de la rémunération habituelle du salarié.</li>
+      <li><strong>Traitement fiscal :</strong> le traitement fiscal est identique (cotisations + impôt sur le total), mais la méthode de calcul de la retenue peut différer si la prime est exceptionnelle.</li>
+    </ul>
+
+    <h2>Le 13e mois dans le secteur public</h2>
+    <p>
+      Les fonctionnaires et employés de l'État luxembourgeois bénéficient d'une allocation de fin d'année dont les conditions sont fixées par le statut de la fonction publique. Le montant est calculé différemment du secteur privé et peut inclure des éléments spécifiques liés au grade et à l'ancienneté. Les agents communaux et les employés des établissements publics bénéficient de dispositions similaires, adaptées à leur statut particulier.
+    </p>
+
+    <h2>Comparaison internationale</h2>
+    <p>
+      Le 13e mois luxembourgeois se situe dans la moyenne européenne. En Autriche et au Portugal, le 13e (et même le 14e) mois est garanti par la loi. En France, le 13e mois est fréquent mais dépend des conventions collectives (comme au Luxembourg). En Belgique, le pécule de vacances et la prime de fin d'année jouent un rôle similaire. En Allemagne, le Weihnachtsgeld (gratification de Noël) est courant mais pas systématique.
+    </p>
+    <p>
+      L'avantage du système luxembourgeois est sa souplesse : la convention collective adapte le montant et les conditions aux spécificités du secteur, tout en garantissant un niveau élevé de protection grâce aux négociations entre partenaires sociaux.
+    </p>
+
+    <h2>FAQ - 13e mois au Luxembourg</h2>
+
+    <details>
+      <summary><strong>Le 13e mois est-il obligatoire au Luxembourg ?</strong></summary>
+      <p>
+        Non, le 13e mois n'est pas prévu par le Code du travail. Son versement dépend de la convention collective applicable au secteur, du contrat de travail individuel ou d'un usage d'entreprise. En pratique, plus de 85 % des salariés luxembourgeois perçoivent un 13e mois, car la plupart des conventions collectives le prévoient.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Le 13e mois est-il soumis à l'impôt et aux cotisations sociales ?</strong></summary>
+      <p>
+        Oui, le 13e mois est intégralement soumis aux cotisations sociales (maladie 2,8 %, pension 8 %, dépendance 1,4 %) et à l'impôt sur le revenu. Il n'existe pas de régime fiscal favorable. L'impôt est calculé par annualisation : le 13e mois est ajouté au revenu annuel total, ce qui le place dans les tranches marginales élevées du barème.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Comment est calculé le 13e mois en cas de départ en cours d'année ?</strong></summary>
+      <p>
+        En cas de départ en cours d'année (démission ou licenciement), le 13e mois est généralement proratisé en fonction du nombre de mois travaillés. Un salarié quittant fin juin perçoit 6/12 du montant. Les conditions exactes de proratisation sont définies par la convention collective ou le contrat de travail. Certaines conventions exigent une ancienneté minimale.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Simulez votre salaire annuel avec 13e mois.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales</a> - Cotisations sur le 13e mois.</li>
+        <li><a href="/guides/classes-impot-luxembourg/" class="text-primary hover:underline font-medium">Guide : Classes d'impôt</a> - Impact de la classe sur l'imposition du 13e mois.</li>
+        <li><a href="/guides/optimiser-salaire-net-luxembourg/" class="text-primary hover:underline font-medium">Guide : Optimiser son salaire net</a> - Maximiser le net sur votre rémunération globale.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://guichet.public.lu/fr/entreprises/ressources-humaines/remuneration/composantes-salaire/gratification.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Gratifications et primes</a> - Cadre juridique du 13e mois au Luxembourg.</li>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Traitement fiscal des gratifications.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Cotisations sociales sur les éléments de rémunération.</li>
+    </ul>
+  </article>
+</Layout>

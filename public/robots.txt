@@ -10,3 +10,5 @@ Allow: /
 
 User-agent: anthropic-ai
 Allow: /
+
+Disallow: /*?*

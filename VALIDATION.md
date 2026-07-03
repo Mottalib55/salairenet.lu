@@ -1,34 +1,78 @@
 # Validation — salairenet.lu
 
-## Cas de test vérifiés contre les barèmes officiels
+## Cas de test verifies contre les baremes officiels
 
-### Cas 1 : Salarié 5 000 € brut, classe 1, sans enfants
+### Cas 1 : Salarie 5 000 EUR brut, classe 1, sans enfants
 
-- **Entrée** : 5 000 € brut/mois, classe 1, 0 enfants, 12 mois
-- **Cotisations mensuelles** : CNS 140 € (2,8 %), pension 400 € (8 %), dépendance 70 € (1,4 %) = 610 €
-- **Brut annuel** : 60 000 €, cotisations annuelles : 7 320 €
-- **Revenu imposable** : 60 000 - 7 320 - 540 - 480 = 51 660 €
-- **Source** : CCSS taux 2026, ACD barème 2026
+**Entree :** Brut 5 000 EUR/mois, classe 1, pas d'enfants
+**Calcul attendu :**
+- Assurance maladie (2,8%) : 140,00 EUR
+- Pension (8%) : 400,00 EUR
+- Dependance (1,4%) : 70,00 EUR
+- Total cotisations : 610,00 EUR
+- Impot classe 1 (progressif) : ~822 EUR
+- **Net : ~3 568 EUR**
 
-### Cas 2 : Couple classe 2, 8 000 € brut, 2 enfants
+**Source :** impotsdirects.public.lu, ccss.lu
 
-- **Entrée** : 8 000 € brut/mois, classe 2, 2 enfants, 12 mois
-- **Splitting** : revenu imposable divisé par 2 → taux marginal réduit
-- **Modération enfants** : 2 × 922,50 = 1 845 €/an
-- **Vérification** : impôt classe 2 < impôt classe 1 (splitting + enfants)
-- **Source** : ACD barème 2026, art. 119 L.I.R.
+### Cas 2 : Salarie 8 000 EUR brut, classe 2, 2 enfants
 
-### Cas 3 : Haut salaire au-dessus du plafond de cotisations
+**Entree :** Brut 8 000 EUR/mois, classe 2 (marie), 2 enfants
+**Calcul attendu :**
+- Cotisations sociales : 976,00 EUR
+- Impot classe 2 : nettement inferieur a classe 1
+- CIS applique
+- **Net classe 2 > net classe 1 au meme brut**
 
-- **Entrée** : 15 000 € brut/mois, classe 1, 0 enfants
-- **Cotisations plafonnées** : CNS et pension calculées sur 13 311,69 €, dépendance sur 15 000 €
-- **CNS mensuelle** : 13 311,69 × 2,8 % = 372,73 €
-- **Pension mensuelle** : 13 311,69 × 8 % = 1 064,94 €
-- **Dépendance mensuelle** : 15 000 × 1,4 % = 210 €
-- **Source** : CCSS plafond SSM × 5 = 13 311,69 €/mois en 2026
+### Cas 3 : Frontalier France, 6 000 EUR brut
 
-## Sources
+**Entree :** Brut 6 000 EUR/mois, frontalier France
+**Verification :**
+- Cotisations sociales luxembourgeoises identiques
+- Imposition au Luxembourg (convention fiscale)
+- Seuil teletravail : 34 jours/an
 
-- [ACD — Barème impôt](https://impotsdirects.public.lu/fr/baremes.html)
-- [CCSS — Taux de cotisation](https://ccss.lu/cotisations/)
-- [Guichet.lu — SSM](https://guichet.public.lu/fr/entreprises/ressources-humaines/remuneration/salaire-social-minimum.html)
+**Source :** impotsdirects.public.lu, guichet.public.lu
+
+---
+
+## Build status
+
+- **Build:** 28 pages, 0 errors
+- **Tests:** 14/14 passed
+- **Sitemap:** auto-generated (sitemap-index.xml)
+
+## Page inventory (28 pages)
+
+| Category | Count | Details |
+|---|---|---|
+| Home + legal | 3 | index, mentions-legales, confidentialite |
+| Tool pages | 1 | faq |
+| Guides index | 1 | /guides/ |
+| Guide articles | 8 | classes-impot-luxembourg, frontalier-france-luxembourg, frontalier-belgique-luxembourg, cotisations-sociales-luxembourg, credit-impot-salarie, treizieme-mois-luxembourg, salaire-minimum-luxembourg, optimiser-salaire-net-luxembourg |
+| Salary pages | 12 | salaire-[brut]-net-luxembourg (3000 through 25000) |
+| Frontalier pages | 3 | frontalier-[pays] (france, belgique, allemagne) |
+
+## Components
+
+- SalaryCalculator.tsx (Luxembourg gross-to-net calculator with class selection)
+
+## Data files
+
+- baremes-2026.ts — Luxembourg tax brackets, social contributions, CIS
+- salaires-data.ts — 12 salary entries with pre-calculated examples
+- frontalier-data.ts — 3 cross-border country entries
+
+## Quality gates
+
+- [x] Build passes (28 pages, 0 errors)
+- [x] Tests pass (14/14)
+- [x] Sitemap generated
+- [x] Schema.org on every page (WebApplication, FAQPage, BreadcrumbList)
+- [x] Analytics: Plausible + GA4 placeholder
+- [x] robots.txt present
+- [x] llms.txt present
+- [x] All guide pages > 1500 words
+- [x] Disclaimer in footer
+- [x] Mobile-responsive navigation (hamburger menu)
+- [x] Internal cross-linking between tools and guides

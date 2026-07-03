@@ -4,7 +4,7 @@ import SalaryCalculator from '../components/SalaryCalculator';
 ---
 
 <Layout
-  title="Calculateur Salaire Brut Net Luxembourg 2026 — Classes 1, 1a, 2"
+  title="Calculateur Salaire Brut Net Luxembourg 2026 - Classes 1, 1a, 2"
   description="Calculez votre salaire net au Luxembourg à partir du brut : cotisations CNS, pension, dépendance, impôt par classe (1, 1a, 2), CIS, modération enfants. Barèmes 2026 officiels."
 >
   <div class="space-y-10">
@@ -19,7 +19,7 @@ import SalaryCalculator from '../components/SalaryCalculator';
       </p>
     </div>
 
-    <SalaryCalculator client:load />
+    <SalaryCalculator client:idle />
 
     <div class="prose prose-slate max-w-none">
 
@@ -37,7 +37,7 @@ import SalaryCalculator from '../components/SalaryCalculator';
         les taux de cotisation du Centre commun de la sécurité sociale (CCSS), le barème de l'impôt
         sur le revenu de l'Administration des Contributions Directes (ACD), le crédit d'impôt pour
         salariés (CIS), la contribution au fonds pour l'emploi et la modération d'impôt pour enfants
-        à charge. Le calcul s'effectue entièrement dans votre navigateur — aucune donnée n'est
+        à charge. Le calcul s'effectue entièrement dans votre navigateur - aucune donnée n'est
         transmise à nos serveurs.
       </p>
 
@@ -106,12 +106,12 @@ import SalaryCalculator from '../components/SalaryCalculator';
         du barème :
       </p>
       <ul>
-        <li><strong>Classe 1</strong> — S'applique aux célibataires, divorcés et séparés sans
+        <li><strong>Classe 1</strong> - S'applique aux célibataires, divorcés et séparés sans
         enfants à charge. Le barème s'applique directement sur le revenu imposable.</li>
-        <li><strong>Classe 1a</strong> — Concerne les contribuables monoparentaux (parent isolé
+        <li><strong>Classe 1a</strong> - Concerne les contribuables monoparentaux (parent isolé
         avec enfant à charge), les veufs et les contribuables de plus de 65 ans. Elle offre un
         abattement extra-professionnel de 4 500 € qui réduit le revenu imposable.</li>
-        <li><strong>Classe 2</strong> — Réservée aux couples mariés ou pacsés imposés collectivement.
+        <li><strong>Classe 2</strong> - Réservée aux couples mariés ou pacsés imposés collectivement.
         Le mécanisme du « splitting » divise le revenu imposable par deux, applique le barème sur
         cette moitié, puis multiplie l'impôt résultant par deux. Ce mécanisme est avantageux lorsque
         les revenus du couple sont déséquilibrés (un revenu élevé et un revenu faible ou nul).</li>

@@ -20,6 +20,7 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
     <link rel="canonical" href={pageUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="robots" content="index, follow" />
+    <meta name="author" content="Mottalib Radif" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -43,13 +44,46 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
       "description": description,
     })} />
 
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Salaire Net Luxembourg",
+      "url": "https://salairenet.lu",
+      "logo": "https://salairenet.lu/favicon.svg",
+      "founder": {
+        "@type": "Person",
+        "name": "Mottalib Radif"
+      }
+    })} />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mottalib Radif",
+      "jobTitle": "Expert en Finance Personnelle et Fiscalité",
+      "description": "Diplômé MBA INSEAD, passionné de finance personnelle au Luxembourg. Spécialisé en fiscalité luxembourgeoise, cotisations sociales et classes d'impôt.",
+      "alumniOf": { "@type": "EducationalOrganization", "name": "INSEAD" },
+      "image": "https://salairenet.lu/team/mottalib-radif.jpg",
+      "url": "https://salairenet.lu/a-propos/"
+    })} />
+
     <script defer data-domain="salairenet.lu" src="https://plausible.io/js/script.js"></script>
+
+    <!-- Google Analytics 4 — replace G-XXXXXXXXXX with real ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
 
     <style>
       @import '../styles/global.css';
     </style>
   </head>
   <body class="min-h-screen bg-surface text-gray-900 font-sans">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-blue-700 focus:rounded-lg focus:shadow-lg focus:ring-2 focus:ring-blue-500">Skip to content</a>
     <header class="bg-white border-b border-border">
       <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 text-primary font-bold text-xl hover:text-primary-dark transition-colors">
@@ -60,12 +94,40 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
           <a href="/" class="text-gray-600 hover:text-primary transition-colors">Calculateur</a>
+          <a href="/guides/" class="text-gray-600 hover:text-primary transition-colors">Guides</a>
           <a href="/faq/" class="text-gray-600 hover:text-primary transition-colors">FAQ</a>
         </nav>
+        <!-- Mobile hamburger button -->
+        <button
+          id="mobile-menu-btn"
+          type="button"
+          class="md:hidden relative w-8 h-8 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
+          aria-label="Menu de navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="mobile-line block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out origin-center"></span>
+          <span class="mobile-line block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out origin-center"></span>
+          <span class="mobile-line block w-6 h-0.5 bg-gray-700 transition-all duration-300 ease-in-out origin-center"></span>
+        </button>
       </div>
+      <!-- Mobile navigation panel -->
+      <nav
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-border bg-white"
+        aria-label="Navigation mobile"
+      >
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-3 text-sm">
+          <a href="/" class="text-gray-600 hover:text-primary transition-colors py-2 border-b border-gray-100">Calculateur</a>
+          <a href="/guides/" class="text-gray-600 hover:text-primary transition-colors py-2 border-b border-gray-100">Guides</a>
+          <a href="/faq/" class="text-gray-600 hover:text-primary transition-colors py-2 border-b border-gray-100">FAQ</a>
+          <a href="/mentions-legales/" class="text-gray-600 hover:text-primary transition-colors py-2 border-b border-gray-100">Mentions légales</a>
+          <a href="/confidentialite/" class="text-gray-600 hover:text-primary transition-colors py-2">Confidentialité</a>
+        </div>
+      </nav>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 py-8">
+    <main id="main-content" class="max-w-5xl mx-auto px-4 py-8">
       <slot />
     </main>
 
@@ -75,21 +137,25 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
           <div>
             <h3 class="font-semibold text-gray-900 mb-3">Outils</h3>
             <ul class="space-y-2">
-              <li><a href="/" class="hover:text-primary">Calculateur brut → net</a></li>
+              <li><a href="/" class="hover:text-primary">Calculateur brut &rarr; net</a></li>
               <li><a href="/faq/" class="hover:text-primary">Questions fréquentes</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="font-semibold text-gray-900 mb-3">Ressources officielles</h3>
+            <h3 class="font-semibold text-gray-900 mb-3">Guides</h3>
             <ul class="space-y-2">
-              <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">ACD Luxembourg</a></li>
-              <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">CCSS</a></li>
-              <li><a href="https://guichet.public.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Guichet.lu</a></li>
+              <li><a href="/guides/" class="hover:text-primary">Tous les guides</a></li>
+              <li><a href="/guides/classes-impot-luxembourg/" class="hover:text-primary">Classes d'impôt</a></li>
+              <li><a href="/guides/cotisations-sociales-luxembourg/" class="hover:text-primary">Cotisations sociales</a></li>
+              <li><a href="/guides/frontalier-france-luxembourg/" class="hover:text-primary">Frontaliers France</a></li>
             </ul>
           </div>
           <div>
             <h3 class="font-semibold text-gray-900 mb-3">Informations</h3>
             <ul class="space-y-2">
+              <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">ACD Luxembourg</a></li>
+              <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">CCSS</a></li>
+              <li><a href="https://guichet.public.lu" target="_blank" rel="noopener noreferrer" class="hover:text-primary">Guichet.lu</a></li>
               <li><a href="/mentions-legales/" class="hover:text-primary">Mentions légales</a></li>
               <li><a href="/confidentialite/" class="hover:text-primary">Confidentialité</a></li>
             </ul>
@@ -100,5 +166,32 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
         </div>
       </div>
     </footer>
+
+    <script is:inline>
+      (function() {
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        if (!btn || !menu) return;
+
+        btn.addEventListener('click', function() {
+          const isOpen = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!isOpen));
+          menu.classList.toggle('hidden');
+
+          const lines = btn.querySelectorAll('.mobile-line');
+          if (!isOpen) {
+            // Transform into X
+            lines[0].style.transform = 'translateY(8px) rotate(45deg)';
+            lines[1].style.opacity = '0';
+            lines[2].style.transform = 'translateY(-8px) rotate(-45deg)';
+          } else {
+            // Revert to hamburger
+            lines[0].style.transform = '';
+            lines[1].style.opacity = '1';
+            lines[2].style.transform = '';
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

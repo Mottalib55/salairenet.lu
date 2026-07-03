@@ -1,0 +1,265 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Classes d'impôt au Luxembourg (1, 1a, 2) : conditions et impact sur le net - Guide 2026";
+const description = "Guide complet sur les classes d'imposition au Luxembourg : classe 1, 1a, 2, conditions d'attribution, splitting, impact sur le salaire net et exemples chiffrés 2026.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Classes d'impôt au Luxembourg", "item": "https://salairenet.lu/guides/classes-impot-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Comment connaître sa classe d'impôt au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Votre classe d'impôt figure sur votre fiche de retenue d'impôt délivrée par l'Administration des Contributions Directes (ACD). Elle est déterminée automatiquement en fonction de votre situation familiale au 1er janvier de l'année fiscale : célibataire (classe 1), parent isolé ou veuf (classe 1a), marié ou pacsé (classe 2). Vous pouvez vérifier ou modifier votre classe via MyGuichet.lu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un frontalier peut-il obtenir la classe 2 au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, un frontalier marié ou pacsé peut bénéficier de la classe 2 au Luxembourg. Si le conjoint ne travaille pas ou travaille également au Luxembourg, la classe 2 est attribuée automatiquement. Si le conjoint travaille dans un autre pays, le frontalier peut demander l'assimilation fiscale aux résidents à condition que plus de 90 % des revenus mondiaux du ménage proviennent du Luxembourg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quelle est la différence de salaire net entre la classe 1 et la classe 2 ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La différence dépend du niveau de salaire. Pour un salaire brut de 5 000 € par mois, la différence est d'environ 200 à 300 € net par mois en faveur de la classe 2. Pour un salaire de 10 000 € brut, la différence peut atteindre 700 à 900 € par mois. Le mécanisme du splitting en classe 2 divise le revenu imposable par deux avant d'appliquer le barème, ce qui réduit considérablement le taux marginal d'imposition."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Classes d'impôt au Luxembourg</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Les classes d'impôt au Luxembourg (1, 1a, 2) : guide complet 2026</h1>
+
+    <p>
+      Le système fiscal luxembourgeois repose sur un mécanisme de classes d'imposition qui détermine la manière dont le barème de l'impôt sur le revenu est appliqué à chaque contribuable. Contrairement à d'autres pays européens qui utilisent un système de parts fiscales (comme le quotient familial en France), le Luxembourg classe les contribuables dans l'une des trois catégories - classe 1, classe 1a ou classe 2 - en fonction de leur situation familiale et personnelle au 1<sup>er</sup> janvier de l'année d'imposition. Cette classification a un impact majeur sur le montant de l'impôt retenu à la source et, par conséquent, sur le salaire net perçu chaque mois.
+    </p>
+    <p>
+      Comprendre les classes d'impôt est essentiel pour tout salarié au Luxembourg, qu'il soit résident ou frontalier. Le choix (ou l'attribution) de la bonne classe peut représenter une différence de plusieurs centaines d'euros par mois sur le bulletin de paie. Ce guide détaille les conditions d'attribution de chaque classe, leur fonctionnement technique, leur impact chiffré sur le salaire net et les démarches pour en bénéficier.
+    </p>
+
+    <h2>Présentation générale des trois classes d'imposition</h2>
+    <p>
+      Le Luxembourg distingue trois classes d'imposition, codifiées par la loi modifiée du 4 décembre 1967 concernant l'impôt sur le revenu (L.I.R.). Chaque classe correspond à un profil de contribuable spécifique et modifie la façon dont le barème progressif à 23 tranches est appliqué au revenu imposable. Les classes ne changent pas les taux d'imposition eux-mêmes, mais le mode de calcul de l'assiette soumise au barème.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Classe</th>
+          <th>Profil du contribuable</th>
+          <th>Mécanisme fiscal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Classe 1</strong></td>
+          <td>Célibataire, divorcé ou séparé sans enfant à charge</td>
+          <td>Barème appliqué directement sur le revenu imposable</td>
+        </tr>
+        <tr>
+          <td><strong>Classe 1a</strong></td>
+          <td>Parent isolé avec enfant, veuf, contribuable de 65 ans et plus</td>
+          <td>Abattement extra-professionnel de 4 500 € + barème direct</td>
+        </tr>
+        <tr>
+          <td><strong>Classe 2</strong></td>
+          <td>Couple marié ou pacsé (imposition collective)</td>
+          <td>Splitting : revenu divisé par 2 avant barème, impôt multiplié par 2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Classe 1 : le régime de base pour les célibataires</h2>
+    <p>
+      La classe 1 est la classe par défaut. Elle s'applique à tout contribuable qui ne remplit pas les conditions de la classe 1a ou de la classe 2. Concrètement, elle concerne les personnes célibataires, divorcées ou séparées de fait depuis plus de trois ans, sans enfant à charge et âgées de moins de 65 ans.
+    </p>
+    <p>
+      En classe 1, le barème progressif de l'impôt sur le revenu est appliqué directement sur le revenu imposable annuel. Aucun abattement spécifique ni mécanisme de splitting ne vient réduire l'assiette. Le revenu imposable est calculé comme suit : salaire brut annuel, moins les cotisations sociales (part salariale), moins le forfait pour frais d'obtention (540 € par an, ou les frais réels s'ils sont supérieurs), moins les dépenses spéciales forfaitaires (480 € par an).
+    </p>
+    <p>
+      Pour un salaire brut mensuel de 5 000 € (60 000 € annuels), le revenu imposable en classe 1 est d'environ 52 680 € après déduction des cotisations sociales et des forfaits. L'impôt annuel résultant est d'environ 8 400 €, soit un taux effectif d'imposition de 14 %. Le salaire net mensuel s'établit à environ 3 690 € après cotisations sociales (610 €) et impôt (700 €).
+    </p>
+    <p>
+      La classe 1 est la plus courante parmi les jeunes actifs célibataires. Elle représente environ 40 % des fiches de retenue d'impôt émises par l'ACD. Les salariés en classe 1 peuvent réduire leur impôt par des déductions telles que les intérêts d'emprunt immobilier, les cotisations de prévoyance-vieillesse ou les dons déductibles, mais ces éléments ne changent pas la classe elle-même.
+    </p>
+
+    <h2>Classe 1a : un régime intermédiaire pour situations particulières</h2>
+    <p>
+      La classe 1a offre un traitement fiscal légèrement plus favorable que la classe 1. Elle est attribuée aux contribuables qui remplissent l'une des conditions suivantes :
+    </p>
+    <ul>
+      <li><strong>Parent isolé avec enfant à charge</strong> - Un contribuable non marié (célibataire, divorcé, séparé) qui a au moins un enfant à charge au 1<sup>er</sup> janvier de l'année d'imposition. L'enfant doit faire partie du ménage et être âgé de moins de 21 ans (ou de moins de 25 ans s'il poursuit des études supérieures).</li>
+      <li><strong>Veuf ou veuve</strong> - Un contribuable dont le conjoint est décédé. La classe 1a est attribuée à compter de la quatrième année suivant le décès du conjoint (les trois premières années, le veuf conserve la classe 2).</li>
+      <li><strong>Contribuable de 65 ans et plus</strong> - Toute personne ayant atteint l'âge de 65 ans au 1<sup>er</sup> janvier de l'année d'imposition, même sans enfant à charge.</li>
+      <li><strong>Contribuable bénéficiant d'une pension d'invalidité</strong> - Les personnes percevant une pension d'invalidité sous certaines conditions.</li>
+    </ul>
+    <p>
+      L'avantage principal de la classe 1a réside dans un abattement extra-professionnel de 4 500 € par an. Cet abattement réduit le revenu imposable avant application du barème, ce qui diminue l'impôt d'environ 600 à 1 500 € par an selon le niveau de revenu. Pour le même salaire brut de 5 000 € mensuel, un salarié en classe 1a paie environ 100 € d'impôt en moins par mois qu'en classe 1.
+    </p>
+    <p>
+      Il est important de noter que la classe 1a n'offre pas le mécanisme du splitting réservé à la classe 2. L'avantage fiscal est donc bien moindre que celui d'un couple marié. Néanmoins, pour un parent isolé, cet abattement combiné à la modération d'impôt pour enfant(s) à charge (922,50 € par enfant et par an) peut significativement alléger la charge fiscale.
+    </p>
+
+    <h2>Classe 2 : le splitting pour les couples mariés ou pacsés</h2>
+    <p>
+      La classe 2 est réservée aux couples mariés ou ayant conclu un partenariat civil (PACS luxembourgeois) et qui optent pour l'imposition collective. Elle constitue le régime fiscal le plus avantageux dans la majorité des cas, grâce au mécanisme du splitting.
+    </p>
+
+    <h3>Le mécanisme du splitting expliqué</h3>
+    <p>
+      Le splitting fonctionne en trois étapes. Premièrement, les revenus imposables des deux conjoints sont additionnés pour former le revenu global du ménage. Deuxièmement, ce revenu global est divisé par deux. Troisièmement, le barème progressif est appliqué sur cette moitié, puis l'impôt obtenu est multiplié par deux. Ce mécanisme a pour effet de « lisser » les revenus entre les deux conjoints, réduisant ainsi le taux marginal d'imposition.
+    </p>
+    <p>
+      L'avantage du splitting est maximal lorsque les revenus du couple sont très déséquilibrés. Si un seul conjoint travaille et perçoit 8 000 € brut par mois, le splitting permet de taxer ce revenu comme si chaque conjoint gagnait 4 000 €. Le taux marginal passe de 39 % (applicable à la tranche de 8 000 €) à environ 25 % (applicable à la tranche de 4 000 €). En revanche, si les deux conjoints gagnent exactement le même salaire, le splitting n'apporte aucun avantage par rapport à deux impositions individuelles en classe 1.
+    </p>
+
+    <h3>Conditions d'accès à la classe 2</h3>
+    <p>
+      Pour bénéficier de la classe 2, les conditions suivantes doivent être réunies :
+    </p>
+    <ul>
+      <li>Être marié ou lié par un PACS au 1<sup>er</sup> janvier de l'année d'imposition.</li>
+      <li>Ne pas être séparé de fait. Les conjoints doivent vivre ensemble ou du moins ne pas avoir entamé une procédure de séparation formelle.</li>
+      <li>Opter pour l'imposition collective. Les couples mariés résidents sont automatiquement placés en classe 2, mais ils peuvent demander l'imposition individuelle (chacun en classe 1) si cela est plus favorable.</li>
+    </ul>
+
+    <h3>Classe 2 pour les frontaliers</h3>
+    <p>
+      Les frontaliers mariés peuvent accéder à la classe 2 dans deux cas. Si le conjoint ne travaille pas ou travaille également au Luxembourg, la classe 2 est attribuée automatiquement. Si le conjoint travaille dans un autre pays (France, Belgique, Allemagne), le frontalier peut demander l'assimilation fiscale aux résidents, à condition que plus de 90 % des revenus professionnels mondiaux du ménage proviennent du Luxembourg. Cette demande se fait via le formulaire 166 auprès de l'ACD.
+    </p>
+    <p>
+      Attention : si le conjoint du frontalier dispose de revenus significatifs dans son pays de résidence, le seuil de 90 % peut ne pas être atteint, et le frontalier restera en classe 1. Dans ce cas, il peut être pertinent de vérifier si les revenus du conjoint ne dépassent pas le seuil en prenant en compte les revenus nets imposables et non les revenus bruts.
+    </p>
+
+    <h2>Impact chiffré sur le salaire net : comparatif classe 1, 1a et 2</h2>
+    <p>
+      Le tableau suivant illustre l'impact de chaque classe d'imposition sur le salaire net mensuel, pour un salarié sans enfant à charge, en appliquant les barèmes 2026. Les cotisations sociales sont identiques quelle que soit la classe.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Salaire brut mensuel</th>
+          <th>Net classe 1</th>
+          <th>Net classe 1a</th>
+          <th>Net classe 2</th>
+          <th>Gain classe 2 vs classe 1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>3 000 €</td><td>~2 530 €</td><td>~2 570 €</td><td>~2 660 €</td><td>+130 €</td></tr>
+        <tr><td>5 000 €</td><td>~3 690 €</td><td>~3 790 €</td><td>~4 060 €</td><td>+370 €</td></tr>
+        <tr><td>7 000 €</td><td>~4 750 €</td><td>~4 870 €</td><td>~5 380 €</td><td>+630 €</td></tr>
+        <tr><td>10 000 €</td><td>~6 180 €</td><td>~6 310 €</td><td>~7 050 €</td><td>+870 €</td></tr>
+      </tbody>
+    </table>
+
+    <p>
+      Ces montants sont indicatifs et calculés pour un salarié sans enfant, sans déductions spécifiques. L'écart entre la classe 1 et la classe 2 augmente de manière significative avec le niveau de salaire, en raison de la progressivité du barème. Pour un salaire de 10 000 € brut, la classe 2 permet d'économiser plus de 870 € d'impôt par mois, soit plus de 10 000 € par an.
+    </p>
+
+    <h2>Changement de classe d'imposition</h2>
+    <p>
+      La classe d'imposition est déterminée par la situation du contribuable au 1<sup>er</sup> janvier de l'année fiscale. Un changement de situation en cours d'année (mariage, divorce, naissance d'un enfant) ne modifie la classe qu'à compter du 1<sup>er</sup> janvier de l'année suivante, sauf pour le mariage qui donne droit à la classe 2 rétroactivement pour toute l'année civile du mariage.
+    </p>
+    <p>
+      Pour modifier sa classe d'imposition, le contribuable doit adresser une demande à l'ACD, soit via le formulaire papier approprié, soit en ligne via MyGuichet.lu. Les délais de traitement varient de quelques jours à quelques semaines. Il est recommandé d'effectuer la demande dès que possible après un changement de situation pour que la nouvelle fiche de retenue soit transmise à l'employeur.
+    </p>
+
+    <h3>Cas particuliers</h3>
+    <ul>
+      <li><strong>Année du mariage :</strong> le couple bénéficie de la classe 2 pour toute l'année civile, même si le mariage a eu lieu en décembre.</li>
+      <li><strong>Année du divorce :</strong> le contribuable conserve la classe 2 pour l'année du divorce et passe en classe 1 (ou 1a s'il a des enfants à charge) au 1<sup>er</sup> janvier de l'année suivante.</li>
+      <li><strong>Décès du conjoint :</strong> le veuf conserve la classe 2 pendant les trois années suivant l'année du décès, puis passe en classe 1a.</li>
+      <li><strong>PACS :</strong> les partenaires pacsés au Luxembourg bénéficient de la classe 2 dans les mêmes conditions que les couples mariés depuis la loi du 9 juillet 2004.</li>
+    </ul>
+
+    <h2>Imposition individuelle vs collective pour les couples</h2>
+    <p>
+      Depuis la réforme fiscale de 2017, les couples mariés résidents ont la possibilité de choisir entre l'imposition collective (classe 2 avec splitting) et l'imposition individuelle (chaque conjoint en classe 1). L'imposition individuelle peut être avantageuse dans le cas rare où les deux conjoints ont des revenus très proches et où l'un des deux dispose de déductions personnelles importantes (intérêts d'emprunt, pertes reportables, etc.).
+    </p>
+    <p>
+      Dans la grande majorité des cas, l'imposition collective en classe 2 reste plus avantageuse. Il est toutefois recommandé de simuler les deux options, par exemple avec notre calculateur, avant de faire un choix définitif. Le choix peut être modifié chaque année dans la déclaration d'impôt.
+    </p>
+
+    <h2>Démarches pratiques</h2>
+    <p>
+      La fiche de retenue d'impôt est le document officiel qui indique la classe d'imposition applicable. Elle est émise par l'ACD et transmise directement à l'employeur sous forme électronique. Le salarié peut consulter sa fiche de retenue sur MyGuichet.lu ou demander une copie papier.
+    </p>
+    <p>
+      Pour les frontaliers, la première fiche de retenue est établie sur demande auprès du bureau RTS (Retenue d'impôt sur les Traitements et Salaires) de l'ACD. Il est nécessaire de fournir un certificat de résidence, un acte de mariage le cas échéant, et les justificatifs de revenus du conjoint pour la demande de classe 2 avec assimilation.
+    </p>
+    <p>
+      Les modifications de classe prennent effet à la date d'émission de la nouvelle fiche de retenue. L'employeur ajuste la retenue d'impôt sur le salaire suivant. Un éventuel trop-perçu d'impôt sera régularisé via la déclaration d'impôt annuelle.
+    </p>
+
+    <h2>FAQ - Classes d'impôt au Luxembourg</h2>
+
+    <details>
+      <summary><strong>Comment connaître sa classe d'impôt au Luxembourg ?</strong></summary>
+      <p>
+        Votre classe d'impôt figure sur votre fiche de retenue d'impôt délivrée par l'Administration des Contributions Directes (ACD). Elle est déterminée automatiquement en fonction de votre situation familiale au 1<sup>er</sup> janvier de l'année fiscale : célibataire (classe 1), parent isolé ou veuf (classe 1a), marié ou pacsé (classe 2). Vous pouvez vérifier ou modifier votre classe via MyGuichet.lu ou en contactant le bureau RTS de l'ACD.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Un frontalier peut-il obtenir la classe 2 au Luxembourg ?</strong></summary>
+      <p>
+        Oui, un frontalier marié ou pacsé peut bénéficier de la classe 2 au Luxembourg. Si le conjoint ne travaille pas ou travaille également au Luxembourg, la classe 2 est attribuée automatiquement. Si le conjoint travaille dans un autre pays, le frontalier peut demander l'assimilation fiscale aux résidents à condition que plus de 90 % des revenus mondiaux du ménage proviennent du Luxembourg. La demande se fait via le formulaire 166 de l'ACD.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Quelle est la différence de salaire net entre la classe 1 et la classe 2 ?</strong></summary>
+      <p>
+        La différence dépend du niveau de salaire. Pour un salaire brut de 5 000 € par mois, la différence est d'environ 300 à 400 € net par mois en faveur de la classe 2. Pour un salaire de 10 000 € brut, la différence peut atteindre 800 à 900 € par mois. Le mécanisme du splitting en classe 2 divise le revenu imposable par deux avant d'appliquer le barème, ce qui réduit considérablement le taux marginal d'imposition pour les hauts revenus.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Simulez l'impact de votre classe d'impôt sur votre salaire net.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales au Luxembourg</a> - Comprendre les 12,2 % de cotisations prélevées sur votre brut.</li>
+        <li><a href="/guides/credit-impot-salarie/" class="text-primary hover:underline font-medium">Guide : Crédit d'impôt salarié (CIS)</a> - Le CIS de 696 €/an qui réduit votre impôt.</li>
+        <li><a href="/guides/optimiser-salaire-net-luxembourg/" class="text-primary hover:underline font-medium">Guide : Optimiser son salaire net</a> - Toutes les pistes pour maximiser votre net.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Barèmes d'imposition et fiches de retenue.</li>
+      <li><a href="https://guichet.public.lu/fr/citoyens/impots-taxes/activite-salariee/imposition-salaire/classe-impot.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Classes d'imposition</a> - Conditions et démarches officielles.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Taux de cotisations sociales en vigueur.</li>
+    </ul>
+  </article>
+</Layout>

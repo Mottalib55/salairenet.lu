@@ -1,0 +1,100 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Glossaire", "item": "https://salairenet.lu/glossaire/" }
+  ]
+};
+
+const terms = [
+  {
+    term: "Abattement",
+    definition: "L'abattement est une reduction appliquee a la base imposable avant le calcul de l'impot sur le revenu. Au Luxembourg, plusieurs abattements existent : abattement pour frais de deplacement, abattement pour charges extraordinaires et abattement pour interets debiteurs."
+  },
+  {
+    term: "Assurance dependance",
+    definition: "L'assurance dependance est une cotisation sociale obligatoire au Luxembourg qui finance la prise en charge des personnes en situation de dependance. Le taux est de 1,4 % applique sur l'ensemble des revenus (salaire, revenus de remplacement), avec une participation de l'Etat."
+  },
+  {
+    term: "Assurance maladie",
+    definition: "L'assurance maladie est une cotisation sociale obligatoire qui finance les soins de sante au Luxembourg. Le taux salarial est de 2,80 % du salaire brut, auquel s'ajoute une part patronale identique. Elle est geree par la Caisse Nationale de Sante (CNS)."
+  },
+  {
+    term: "Assurance pension",
+    definition: "L'assurance pension est la cotisation sociale qui finance le regime de retraite luxembourgeois. Le taux salarial est de 8 % du salaire brut, auquel s'ajoute une part patronale de 8 % et une contribution de l'Etat de 8 %. Elle est geree par la CNAP."
+  },
+  {
+    term: "Bareme d'imposition",
+    definition: "Le bareme d'imposition est la grille progressive utilisee par l'Administration des Contributions Directes pour calculer l'impot sur le revenu au Luxembourg. Les taux vont de 0 % (premiere tranche exoneree) a 42 % pour les revenus les plus eleves, auxquels s'ajoute la contribution au fonds pour l'emploi."
+  },
+  {
+    term: "Bonus pour enfant",
+    definition: "Le bonus pour enfant est une allocation versee a chaque menage ayant des enfants a charge au Luxembourg. Il remplace l'ancien systeme de moderation d'impot pour enfants. Son montant est verse mensuellement et vient en deduction de l'impot du, le cas echeant."
+  },
+  {
+    term: "Classe d'impot",
+    definition: "La classe d'impot determine le bareme d'imposition applicable au salarie au Luxembourg. Il existe trois classes : classe 1 (celibataire sans enfant), classe 1a (celibataire avec enfant ou veuf) et classe 2 (couple marie ou partenaire). La classe influence directement le montant de l'impot retenu."
+  },
+  {
+    term: "Cotisations sociales",
+    definition: "Les cotisations sociales au Luxembourg comprennent l'assurance maladie (2,80 %), l'assurance pension (8 %) et l'assurance dependance (1,4 %). Elles sont prelevees directement sur le salaire brut. La part salariale totale represente environ 12,20 % du salaire brut, dans les limites du plafond cotisable."
+  },
+  {
+    term: "Credit d'impot",
+    definition: "Le credit d'impot est une reduction directe de l'impot du. Au Luxembourg, il existe notamment le credit d'impot pour salaries (CIS), le credit d'impot monoparental (CIM) et le credit d'impot pour independants. Le CIS est automatiquement deduit de l'impot retenu a la source."
+  },
+  {
+    term: "Deduction forfaitaire",
+    definition: "La deduction forfaitaire est un montant fixe deduit automatiquement du revenu imposable pour couvrir les frais professionnels. Au Luxembourg, les salaries beneficient d'une deduction forfaitaire pour frais d'obtention (minimum 540 euros par an) sans justificatif."
+  },
+  {
+    term: "Frontalier",
+    definition: "Un frontalier est un travailleur qui reside dans un pays (France, Belgique, Allemagne) et exerce son activite professionnelle au Luxembourg. Il est soumis aux cotisations sociales luxembourgeoises et, en general, a l'impot luxembourgeois sur ses revenus d'emploi. Des conventions fiscales bilaterales regissent sa situation."
+  },
+  {
+    term: "Impot sur le revenu",
+    definition: "L'impot sur le revenu au Luxembourg est un impot progressif preleve a la source par l'employeur via la retenue d'impot (RTS). Son montant depend du revenu imposable, de la classe d'impot et des eventuels abattements et credits d'impot applicables."
+  },
+  {
+    term: "RTS (Retenue d'impot a la Source)",
+    definition: "La RTS est le mecanisme par lequel l'employeur preleve directement l'impot sur le revenu du salaire brut du salarie chaque mois. Le montant retenu est calcule selon les baremes de l'ACD en fonction de la classe d'impot et du revenu mensuel. La declaration annuelle permet ensuite de regulariser."
+  },
+  {
+    term: "Salaire brut",
+    definition: "Le salaire brut est la remuneration totale avant toute deduction de cotisations sociales et d'impot sur le revenu. Il comprend le salaire de base, les heures supplementaires, les primes et les avantages en nature. C'est le montant a partir duquel sont calcules les prelevements obligatoires."
+  },
+  {
+    term: "Salaire net",
+    definition: "Le salaire net est le montant effectivement percu par le salarie apres deduction des cotisations sociales (assurance maladie, pension, dependance) et de la retenue d'impot a la source. C'est la somme viree sur le compte bancaire du salarie chaque mois."
+  }
+];
+---
+<Layout title="Glossaire du salaire au Luxembourg - SalaireNet.lu" description="Definitions des termes cles du salaire au Luxembourg : cotisations sociales, classes d'impot, RTS, frontalier et plus encore.">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <nav class="text-sm text-gray-500 mb-8">
+    <ol class="flex items-center gap-2">
+      <li><a href="/" class="hover:text-gray-700">Accueil</a></li>
+      <li>/</li>
+      <li class="text-gray-800 font-medium">Glossaire</li>
+    </ol>
+  </nav>
+
+  <div class="max-w-3xl mx-auto">
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Glossaire du salaire au Luxembourg</h1>
+    <p class="text-gray-600 mb-8">Retrouvez les definitions des termes essentiels pour comprendre votre fiche de paie au Luxembourg. Ce glossaire couvre les cotisations sociales, l'imposition et les specificites fiscales pour les residents et les frontaliers.</p>
+
+    <div class="space-y-6">
+      {terms.map((item) => (
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 class="text-lg font-semibold text-teal-700 mb-2">{item.term}</h2>
+          <p class="text-gray-600">{item.definition}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,218 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Travailleur frontalier Belgique-Luxembourg : fiscalité et convention fiscale 2026";
+const description = "Guide complet pour les frontaliers belges au Luxembourg : convention fiscale belgo-luxembourgeoise, télétravail 34 jours, cotisations sociales, classe d'impôt et démarches.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Frontalier Belgique-Luxembourg", "item": "https://salairenet.lu/guides/frontalier-belgique-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Un frontalier belge paie-t-il ses impôts en Belgique ou au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le frontalier belge travaillant au Luxembourg est imposé au Luxembourg sur ses revenus de source luxembourgeoise. La convention fiscale belgo-luxembourgeoise élimine la double imposition par la méthode de l'exemption avec réserve de progressivité : les revenus luxembourgeois sont exonérés en Belgique mais pris en compte pour déterminer le taux d'imposition applicable aux autres revenus belges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de jours de télétravail un frontalier belge peut-il effectuer ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le frontalier belge bénéficie d'un seuil de tolérance de 34 jours ouvrables de télétravail par an depuis la Belgique. En dessous de ce seuil, les revenus du télétravail restent imposés au Luxembourg. Au-delà, la fraction correspondant au télétravail excédentaire est imposable en Belgique. Pour la sécurité sociale, le seuil est de 49,99 % du temps de travail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le frontalier belge bénéficie-t-il des allocations familiales luxembourgeoises ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le frontalier belge affilié au Luxembourg bénéficie des allocations familiales luxembourgeoises (boni pour enfant de 299,86 € par mois et par enfant). Si les allocations familiales belges sont plus élevées, la Belgique verse un complément différentiel. Le frontalier peut aussi percevoir l'allocation de rentrée scolaire luxembourgeoise."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Frontalier Belgique-Luxembourg</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Travailleur frontalier Belgique-Luxembourg : guide fiscal complet 2026</h1>
+
+    <p>
+      Le Luxembourg emploie environ 50 000 travailleurs frontaliers résidant en Belgique, principalement dans la province de Luxembourg belge (Arlon, Aubange, Virton, Bastogne) et, dans une moindre mesure, dans la province de Liège. Ces frontaliers traversent quotidiennement la frontière pour travailler au Grand-Duché et sont soumis à un régime fiscal et social encadré par la convention fiscale belgo-luxembourgeoise. Ce guide présente l'ensemble des règles applicables en 2026 pour les frontaliers belges.
+    </p>
+
+    <h2>Principe général : imposition au lieu d'exercice de l'activité</h2>
+    <p>
+      La convention fiscale entre la Belgique et le Luxembourg, signée le 17 septembre 1970 et modifiée par les avenants successifs (dont le protocole additionnel de 2021), pose le même principe fondamental que les autres conventions bilatérales du Luxembourg : les revenus d'emploi salarié sont imposés dans l'État où le travail est physiquement exercé. Un frontalier belge travaillant au Luxembourg est donc imposé au Luxembourg sur ses revenus luxembourgeois.
+    </p>
+    <p>
+      Le frontalier belge est soumis au barème d'impôt luxembourgeois à 23 tranches (de 0 % à 42 %), bénéficie du crédit d'impôt salarié (CIS), et se voit attribuer une classe d'imposition (1, 1a ou 2) en fonction de sa situation familiale. Le prélèvement à la source est effectué par l'employeur luxembourgeois sur la base de la fiche de retenue d'impôt émise par l'ACD.
+    </p>
+
+    <h2>Convention fiscale belgo-luxembourgeoise : élimination de la double imposition</h2>
+    <p>
+      La convention fiscale belgo-luxembourgeoise utilise la méthode de l'exemption avec réserve de progressivité pour éviter la double imposition. Concrètement, les revenus de source luxembourgeoise sont exonérés d'impôt en Belgique. Toutefois, ils sont pris en compte pour déterminer le taux d'imposition applicable aux autres revenus belges du contribuable (revenus immobiliers, revenus du conjoint travaillant en Belgique, etc.).
+    </p>
+    <p>
+      Cette méthode diffère de la méthode du crédit d'impôt utilisée par la convention franco-luxembourgeoise. En pratique, le résultat est similaire : pas de double imposition, mais une influence des revenus luxembourgeois sur le taux d'imposition des revenus belges. Pour un frontalier belge dont tous les revenus proviennent du Luxembourg et qui n'a pas de revenus belges significatifs, la réserve de progressivité n'a aucun impact pratique.
+    </p>
+
+    <h3>Déclaration fiscale en Belgique</h3>
+    <p>
+      Le frontalier belge est tenu de déclarer ses revenus luxembourgeois dans sa déclaration fiscale belge (déclaration IPP - impôt des personnes physiques). Les revenus sont reportés dans la rubrique des revenus d'origine étrangère exonérés par convention. Le contribuable doit joindre une attestation de l'ACD confirmant que les revenus ont été imposés au Luxembourg (certificat de rémunération 164NR ou document équivalent).
+    </p>
+    <p>
+      L'administration fiscale belge (SPF Finances) vérifie que les conditions d'exonération sont remplies et applique la réserve de progressivité aux éventuels revenus belges. En l'absence de revenus belges, l'impôt belge est nul. Le frontalier doit néanmoins déposer sa déclaration fiscale belge chaque année, même si aucun impôt belge n'est dû.
+    </p>
+
+    <h2>Le télétravail des frontaliers belges : seuil de 34 jours</h2>
+    <p>
+      Comme pour les frontaliers français, un seuil de tolérance de 34 jours ouvrables par an s'applique aux frontaliers belges qui télétravaillent depuis la Belgique. Ce seuil résulte de l'avenant à la convention fiscale belgo-luxembourgeoise conclu en 2021 et entré en vigueur de manière pérenne.
+    </p>
+    <p>
+      En dessous de 34 jours de télétravail par an, les revenus du télétravail restent imposés au Luxembourg. Au-delà de ce seuil, la fraction des revenus correspondant au télétravail excédentaire est imposable en Belgique. Le calcul se fait au prorata des jours travaillés totaux. Par exemple, un frontalier qui travaille 220 jours par an et télétravaille 50 jours verra 16 jours de revenus (50 - 34) imposés en Belgique, soit un prorata de 16/220 = 7,27 % de son salaire annuel.
+    </p>
+    <p>
+      Le frontalier belge doit tenir un décompte précis de ses jours de télétravail et être en mesure de le justifier auprès des administrations fiscales des deux pays. Les employeurs luxembourgeois mettent généralement en place un système de suivi pour faciliter cette comptabilisation.
+    </p>
+
+    <h3>Distinction entre seuil fiscal et seuil de sécurité sociale</h3>
+    <p>
+      Le seuil fiscal de 34 jours ne doit pas être confondu avec le seuil de sécurité sociale. Depuis l'accord-cadre européen du 1<sup>er</sup> juillet 2023, un frontalier belge peut télétravailler jusqu'à 49,99 % de son temps de travail total depuis la Belgique tout en restant affilié à la sécurité sociale luxembourgeoise. Ce seuil est nettement plus généreux que le seuil fiscal.
+    </p>
+    <p>
+      Un frontalier belge peut donc télétravailler deux jours par semaine (environ 100 jours par an) sans impact sur son affiliation à la sécurité sociale luxembourgeoise, mais il devra gérer les conséquences fiscales du dépassement du seuil de 34 jours. La gestion distincte de ces deux seuils est une source de complexité fréquente pour les frontaliers belges.
+    </p>
+
+    <h2>Cotisations sociales des frontaliers belges</h2>
+    <p>
+      Le frontalier belge est affilié à la sécurité sociale luxembourgeoise et cotise aux mêmes taux que les résidents. La part salariale des cotisations comprend :
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Cotisation</th>
+          <th>Taux salarié</th>
+          <th>Plafond mensuel 2026</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Assurance maladie (CNS)</td><td>2,8 %</td><td>13 311,69 €</td></tr>
+        <tr><td>Assurance pension</td><td>8,0 %</td><td>13 311,69 €</td></tr>
+        <tr><td>Assurance dépendance</td><td>1,4 %</td><td>Pas de plafond</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>12,2 %</strong></td><td>-</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Le frontalier belge bénéficie de la couverture complète de la CNS luxembourgeoise (maladie, maternité, soins dentaires, hospitalisation). Il reçoit une carte européenne d'assurance maladie (CEAM) délivrée par la CNS et peut se faire soigner au Luxembourg ou en Belgique. Sa famille (conjoint, enfants à charge) bénéficie de la même couverture.
+    </p>
+    <p>
+      Comparativement au système belge, les cotisations sociales luxembourgeoises sont significativement plus basses. En Belgique, les cotisations sociales personnelles représentent 13,07 % du salaire brut (avant réduction), contre 12,2 % au Luxembourg. De plus, le taux d'impôt sur le revenu belge est généralement plus élevé que le taux luxembourgeois pour un même niveau de salaire, ce qui renforce l'avantage net du travail au Luxembourg.
+    </p>
+
+    <h2>Classes d'imposition pour les frontaliers belges</h2>
+    <p>
+      Les frontaliers belges se voient attribuer une classe d'imposition selon les mêmes règles que les frontaliers français et les résidents :
+    </p>
+    <ul>
+      <li><strong>Classe 1 :</strong> célibataire sans enfant à charge.</li>
+      <li><strong>Classe 1a :</strong> parent isolé avec enfant, veuf ou veuve, contribuable de 65 ans et plus.</li>
+      <li><strong>Classe 2 :</strong> marié ou pacsé. Attribution automatique si le conjoint ne travaille pas ou travaille aussi au Luxembourg. Si le conjoint travaille en Belgique, le frontalier peut demander l'assimilation fiscale (règle des 90 %) pour obtenir la classe 2.</li>
+    </ul>
+    <p>
+      La procédure d'assimilation fiscale aux résidents pour les frontaliers belges est identique à celle des frontaliers français. Le frontalier doit démontrer que plus de 90 % des revenus professionnels mondiaux du ménage proviennent du Luxembourg. La demande se fait via le formulaire 166 de l'ACD, accompagné de l'avertissement-extrait de rôle belge du conjoint.
+    </p>
+
+    <h2>Prestations familiales et sociales</h2>
+    <p>
+      Le frontalier belge affilié au Luxembourg bénéficie des prestations familiales luxembourgeoises. Le boni pour enfant (allocations familiales luxembourgeoises) est de 299,86 € par mois et par enfant, quel que soit le rang de l'enfant dans la fratrie. S'y ajoute une allocation de rentrée scolaire versée en août.
+    </p>
+    <p>
+      Si les allocations familiales belges sont supérieures aux allocations luxembourgeoises (ce qui peut être le cas en fonction du nombre d'enfants et de la région belge - Wallonie, Flandre ou Bruxelles), la caisse d'allocations familiales belge verse un complément différentiel. Le frontalier cumule donc les allocations luxembourgeoises et le différentiel belge, dans la limite des allocations belges maximales.
+    </p>
+    <p>
+      En matière de pension, le frontalier belge cotise au régime luxembourgeois et acquiert des droits à pension proportionnels à sa durée d'affiliation au Luxembourg. Au moment de la retraite, il percevra une pension luxembourgeoise pour les années travaillées au Luxembourg et, le cas échéant, une pension belge pour les années travaillées en Belgique. Les règlements européens de coordination de la sécurité sociale garantissent la totalisation des périodes d'assurance.
+    </p>
+
+    <h2>Spécificités de la convention belgo-luxembourgeoise</h2>
+    <p>
+      La convention fiscale belgo-luxembourgeoise présente quelques particularités par rapport aux autres conventions du Luxembourg :
+    </p>
+    <ul>
+      <li><strong>Méthode d'élimination de la double imposition :</strong> exemption avec réserve de progressivité (contrairement à la méthode du crédit d'impôt utilisée par la convention franco-luxembourgeoise). Cette différence n'a pas d'impact pour les frontaliers dont tous les revenus proviennent du Luxembourg.</li>
+      <li><strong>Imposition des pensions :</strong> les pensions versées par le Luxembourg à un résident belge sont imposables au Luxembourg (contrairement à certaines conventions où les pensions sont imposées dans le pays de résidence). Le frontalier belge retraité continuera donc de payer l'impôt luxembourgeois sur sa pension luxembourgeoise.</li>
+      <li><strong>Revenus immobiliers :</strong> les revenus immobiliers sont imposés dans le pays de situation de l'immeuble. Un frontalier belge propriétaire d'un bien en Belgique est imposé en Belgique sur ses revenus immobiliers belges, et au Luxembourg sur d'éventuels revenus immobiliers luxembourgeois.</li>
+    </ul>
+
+    <h2>Comparaison avec le statut de frontalier français</h2>
+    <p>
+      Les deux statuts de frontalier (belge et français) sont très similaires en ce qui concerne les cotisations sociales et le barème d'imposition luxembourgeois. Les principales différences résident dans le traitement de la double imposition (exemption pour la Belgique, crédit d'impôt pour la France), dans le système de prestations familiales du pays de résidence et dans le régime fiscal applicable aux pensions de retraite.
+    </p>
+    <p>
+      En termes de salaire net, un frontalier belge et un frontalier français percevant le même salaire brut au Luxembourg auront un salaire net luxembourgeois identique. La différence se manifestera dans la fiscalité résiduelle dans leur pays de résidence, qui est généralement nulle ou très faible si tous les revenus du ménage proviennent du Luxembourg.
+    </p>
+
+    <h2>FAQ - Frontalier Belgique-Luxembourg</h2>
+
+    <details>
+      <summary><strong>Un frontalier belge paie-t-il ses impôts en Belgique ou au Luxembourg ?</strong></summary>
+      <p>
+        Le frontalier belge travaillant au Luxembourg est imposé au Luxembourg sur ses revenus de source luxembourgeoise. La convention fiscale belgo-luxembourgeoise élimine la double imposition par la méthode de l'exemption avec réserve de progressivité. Les revenus luxembourgeois sont exonérés en Belgique mais pris en compte pour déterminer le taux d'imposition applicable aux autres revenus belges.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Combien de jours de télétravail un frontalier belge peut-il effectuer ?</strong></summary>
+      <p>
+        Le frontalier belge bénéficie d'un seuil de tolérance de 34 jours ouvrables de télétravail par an depuis la Belgique. En dessous de ce seuil, les revenus du télétravail restent imposés au Luxembourg. Au-delà, la fraction correspondant au télétravail excédentaire est imposable en Belgique. Le seuil de sécurité sociale (49,99 % du temps de travail) est distinct et plus généreux.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Le frontalier belge bénéficie-t-il des allocations familiales luxembourgeoises ?</strong></summary>
+      <p>
+        Oui, le frontalier belge affilié au Luxembourg bénéficie du boni pour enfant luxembourgeois (299,86 € par mois et par enfant). Si les allocations familiales belges sont supérieures, la Belgique verse un complément différentiel. Le frontalier cumule les deux, dans la limite des prestations belges maximales. Il bénéficie aussi de l'allocation de rentrée scolaire luxembourgeoise.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Simulez votre salaire net en tant que frontalier belge.</li>
+        <li><a href="/guides/frontalier-france-luxembourg/" class="text-primary hover:underline font-medium">Guide : Frontalier France-Luxembourg</a> - Le statut de frontalier français.</li>
+        <li><a href="/guides/classes-impot-luxembourg/" class="text-primary hover:underline font-medium">Guide : Classes d'impôt au Luxembourg</a> - Comprendre les classes 1, 1a et 2.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales</a> - Détail des prélèvements sociaux.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Convention fiscale belgo-luxembourgeoise et formulaires.</li>
+      <li><a href="https://guichet.public.lu/fr/citoyens/impots-taxes/activite-salariee/imposition-salaire/frontalier.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Travailleurs frontaliers</a> - Informations officielles sur le statut frontalier.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Affiliation et cotisations sociales.</li>
+      <li><a href="https://finances.belgium.be" target="_blank" rel="noopener noreferrer">SPF Finances (Belgique)</a> - Obligations déclaratives des frontaliers en Belgique.</li>
+    </ul>
+  </article>
+</Layout>

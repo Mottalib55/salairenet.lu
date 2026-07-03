@@ -1,0 +1,220 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const title = "Travailleur frontalier France-Luxembourg : fiscalité, télétravail, guide 2026";
+const description = "Guide complet pour les frontaliers français au Luxembourg : convention fiscale, seuil de 34 jours de télétravail, cotisations sociales, classe d'impôt et déclaration.";
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://salairenet.lu/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://salairenet.lu/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Frontalier France-Luxembourg", "item": "https://salairenet.lu/guides/frontalier-france-luxembourg/" }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Un frontalier français paie-t-il des impôts en France et au Luxembourg ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non, grâce à la convention fiscale franco-luxembourgeoise, le frontalier français est imposé uniquement au Luxembourg sur ses revenus de source luxembourgeoise. Les revenus sont déclarés en France mais bénéficient d'un crédit d'impôt égal à l'impôt français correspondant, ce qui évite la double imposition. Le frontalier paie ses cotisations sociales au Luxembourg et bénéficie de la couverture de la CNS."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Combien de jours de télétravail un frontalier français peut-il effectuer sans impact fiscal ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depuis l'accord franco-luxembourgeois de 2023, un frontalier français peut télétravailler jusqu'à 34 jours par an depuis la France sans que ses revenus soient imposés en France. Au-delà de ce seuil, la fraction des revenus correspondant au télétravail en France devient imposable en France et non plus au Luxembourg. Ce seuil s'apprécie en jours ouvrables effectivement télétravaillés."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Le frontalier français bénéficie-t-il de la sécurité sociale luxembourgeoise ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui, le frontalier français affilié au Luxembourg bénéficie de la couverture complète de la CNS (assurance maladie), de l'assurance pension et de l'assurance dépendance luxembourgeoises. Il peut se faire soigner au Luxembourg ou en France. Sa famille (conjoint, enfants) bénéficie également de cette couverture. Le frontalier reçoit une carte européenne d'assurance maladie délivrée par la CNS."
+      }
+    }
+  ]
+};
+---
+
+<Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <nav aria-label="Fil d'Ariane" class="mb-6 text-sm text-gray-500">
+    <ol class="flex items-center gap-2 flex-wrap">
+      <li><a href="/" class="hover:text-primary transition-colors">Accueil</a></li>
+      <li class="before:content-['›'] before:mx-1"><a href="/guides/" class="hover:text-primary transition-colors">Guides</a></li>
+      <li class="before:content-['›'] before:mx-1 text-gray-900 font-medium">Frontalier France-Luxembourg</li>
+    </ol>
+  </nav>
+
+  <article class="prose prose-slate max-w-none">
+    <h1>Travailleur frontalier France-Luxembourg : guide fiscal complet 2026</h1>
+
+    <p>
+      Le Luxembourg est le premier employeur de travailleurs frontaliers en Europe. Avec plus de 120 000 résidents français traversant chaque jour la frontière pour travailler au Grand-Duché, le statut de frontalier France-Luxembourg concerne une population considérable. La fiscalité applicable à ces travailleurs est encadrée par la convention fiscale bilatérale entre la France et le Luxembourg, dont la version en vigueur date de 2018 (entrée en application en 2020). Ce guide détaille l'ensemble des règles fiscales et sociales qui s'appliquent au frontalier français en 2026.
+    </p>
+
+    <h2>Principe général : imposition au Luxembourg</h2>
+    <p>
+      Le principe fondamental de la convention fiscale franco-luxembourgeoise est clair : les revenus d'emploi salarié sont imposés dans le pays où le travail est effectivement exercé. Un frontalier français qui travaille physiquement au Luxembourg est donc imposé au Luxembourg, et non en France. Ce principe s'applique quelle que soit la nationalité du salarié, son lieu de résidence exact en France ou la nationalité de l'employeur.
+    </p>
+    <p>
+      Concrètement, le frontalier français est soumis au même barème d'impôt sur le revenu que les résidents luxembourgeois. Il paie les mêmes taux marginaux (de 0 % à 42 %), bénéficie du même crédit d'impôt salarié (CIS de 696 € par an), et est éligible aux mêmes classes d'imposition (1, 1a ou 2). Le prélèvement est effectué à la source par l'employeur luxembourgeois, sur la base de la fiche de retenue d'impôt émise par l'Administration des Contributions Directes (ACD).
+    </p>
+
+    <h2>La déclaration en France : élimination de la double imposition</h2>
+    <p>
+      Bien que le frontalier soit imposé au Luxembourg, il reste tenu de déclarer l'intégralité de ses revenus mondiaux en France, conformément à l'obligation de déclaration des résidents français. Les revenus de source luxembourgeoise sont reportés dans la déclaration de revenus française (formulaire 2042 et annexe 2047 pour les revenus étrangers).
+    </p>
+    <p>
+      La convention fiscale de 2018 utilise la méthode du crédit d'impôt égal à l'impôt français pour éliminer la double imposition. Concrètement, la France calcule l'impôt théorique dû sur les revenus luxembourgeois comme si ces revenus étaient de source française, puis accorde un crédit d'impôt du même montant. Le résultat est que les revenus luxembourgeois n'entraînent aucun impôt supplémentaire en France, mais ils sont pris en compte pour déterminer le taux effectif d'imposition applicable aux autres revenus français (revenus fonciers, revenus du conjoint travaillant en France, etc.).
+    </p>
+    <p>
+      Cette méthode dite du « taux effectif » signifie que les revenus luxembourgeois augmentent le taux d'imposition applicable aux revenus français. Par exemple, un frontalier gagnant 60 000 € au Luxembourg et dont le conjoint gagne 30 000 € en France verra le taux d'imposition des 30 000 € français calculé comme si le foyer gagnait 90 000 € au total. Le crédit d'impôt annule l'impôt français sur les 60 000 €, mais le taux marginal sur les 30 000 € est plus élevé que si le conjoint était imposé seul.
+    </p>
+
+    <h2>Le télétravail des frontaliers : le seuil de 34 jours</h2>
+    <p>
+      La question du télétravail est devenue centrale depuis la pandémie de COVID-19. Lorsqu'un frontalier travaille depuis son domicile en France, il exerce son activité sur le territoire français, ce qui rend théoriquement les revenus correspondants imposables en France et non au Luxembourg. Pour éviter une complexité administrative disproportionnée, la France et le Luxembourg ont négocié un accord spécifique.
+    </p>
+
+    <h3>L'accord de 2023 sur le télétravail</h3>
+    <p>
+      Depuis le 1<sup>er</sup> janvier 2023, un seuil de tolérance de 34 jours ouvrables par an est en vigueur. En dessous de ce seuil, les journées de télétravail effectuées en France restent imposées au Luxembourg, comme si le frontalier avait travaillé physiquement au Grand-Duché. Au-delà de 34 jours, la fraction des revenus correspondant au télétravail excédentaire est imposable en France.
+    </p>
+    <p>
+      Le seuil de 34 jours se calcule en jours ouvrables effectivement télétravaillés en France. Ne sont pas comptabilisés dans ce seuil : les jours de congé, les jours de maladie, les déplacements professionnels hors du Luxembourg (missions, formations), les jours fériés. En revanche, toute journée durant laquelle le frontalier effectue une partie de son travail depuis la France compte comme un jour de télétravail, même s'il ne s'agit que d'une demi-journée.
+    </p>
+
+    <h3>Conséquences du dépassement du seuil</h3>
+    <p>
+      Si le frontalier dépasse les 34 jours de télétravail en France, seule la fraction excédentaire est concernée. Par exemple, un frontalier qui télétravaille 50 jours par an verra 16 jours (50 - 34) de revenus taxés en France plutôt qu'au Luxembourg. La répartition se fait au prorata des jours travaillés totaux sur l'année. L'employeur luxembourgeois doit alors ajuster la retenue d'impôt, et le frontalier doit déclarer la fraction imposable en France dans sa déclaration de revenus.
+    </p>
+    <p>
+      Il est fortement recommandé de tenir un décompte précis des jours de télétravail, idéalement avec un document signé par l'employeur. L'ACD et l'administration fiscale française peuvent demander des justificatifs en cas de contrôle. Certains employeurs luxembourgeois mettent en place des systèmes de suivi automatisé du télétravail pour leurs salariés frontaliers.
+    </p>
+
+    <h3>Sécurité sociale et télétravail</h3>
+    <p>
+      Le seuil fiscal de 34 jours ne doit pas être confondu avec le seuil de sécurité sociale. Depuis le 1<sup>er</sup> juillet 2023, un accord européen (accord-cadre multilatéral) permet aux frontaliers de télétravailler jusqu'à 49,99 % de leur temps de travail total depuis leur pays de résidence tout en restant affiliés à la sécurité sociale du pays d'emploi (le Luxembourg). Ce seuil est distinct du seuil fiscal de 34 jours et plus généreux.
+    </p>
+    <p>
+      Un frontalier français peut donc télétravailler deux jours par semaine (soit environ 100 jours par an) sans changer d'affiliation de sécurité sociale, mais il devra traiter les conséquences fiscales du dépassement du seuil de 34 jours. La distinction entre les deux seuils est source de confusion fréquente et mérite une attention particulière.
+    </p>
+
+    <h2>Classes d'imposition pour les frontaliers français</h2>
+    <p>
+      Les frontaliers français sont soumis aux mêmes classes d'imposition que les résidents luxembourgeois. La classe attribuée dépend de la situation familiale :
+    </p>
+    <ul>
+      <li><strong>Célibataire sans enfant :</strong> classe 1.</li>
+      <li><strong>Parent isolé avec enfant à charge :</strong> classe 1a.</li>
+      <li><strong>Marié, conjoint sans revenus ou conjoint travaillant aussi au Luxembourg :</strong> classe 2 automatique.</li>
+      <li><strong>Marié, conjoint travaillant en France :</strong> classe 1 par défaut. Possibilité de demander la classe 2 par assimilation si plus de 90 % des revenus du ménage proviennent du Luxembourg.</li>
+    </ul>
+
+    <h3>L'assimilation fiscale aux résidents (règle des 90 %)</h3>
+    <p>
+      La demande d'assimilation fiscale est une procédure spécifique aux non-résidents (frontaliers) qui souhaitent bénéficier des mêmes avantages fiscaux que les résidents, notamment la classe 2 et les déductions personnelles (intérêts d'emprunt, assurance-vie, etc.). La condition principale est que plus de 90 % des revenus professionnels mondiaux du ménage soient de source luxembourgeoise.
+    </p>
+    <p>
+      La demande se fait via le formulaire 166 de l'ACD, accompagné des justificatifs de revenus du ménage (avis d'imposition français du conjoint, bulletins de salaire). L'ACD vérifie le respect du seuil de 90 % et émet une nouvelle fiche de retenue en classe 2 si la condition est remplie. Cette procédure doit être renouvelée chaque année.
+    </p>
+    <p>
+      Si le conjoint du frontalier perçoit des revenus modestes en France (par exemple, un travail à temps partiel ou des revenus fonciers limités), le seuil de 90 % peut néanmoins être atteint. Il est recommandé de calculer précisément le ratio avant de déposer la demande. Un refus de l'ACD ne donne pas lieu à sanction, et la demande peut être refaite l'année suivante.
+    </p>
+
+    <h2>Cotisations sociales des frontaliers français</h2>
+    <p>
+      Le frontalier français cotise au Luxembourg et bénéficie de la sécurité sociale luxembourgeoise. Les taux sont identiques à ceux des résidents :
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Cotisation</th>
+          <th>Taux salarié</th>
+          <th>Plafond mensuel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Assurance maladie (CNS)</td><td>2,8 %</td><td>13 311,69 €</td></tr>
+        <tr><td>Assurance pension</td><td>8,0 %</td><td>13 311,69 €</td></tr>
+        <tr><td>Assurance dépendance</td><td>1,4 %</td><td>Pas de plafond</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong>12,2 %</strong></td><td>-</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Le frontalier bénéficie de la couverture maladie de la CNS luxembourgeoise. Il reçoit une carte européenne d'assurance maladie (CEAM) délivrée par la CNS et peut se faire soigner indifféremment au Luxembourg ou en France. Sa famille (conjoint, enfants à charge) bénéficie également de cette couverture, ce qui constitue un avantage significatif par rapport à une affiliation à la sécurité sociale française.
+    </p>
+    <p>
+      Les prestations familiales (allocations familiales) sont versées par la Caisse pour l'avenir des enfants (CAE) du Luxembourg et complétées, le cas échéant, par un différentiel de la CAF française si les prestations françaises sont plus élevées. Le boni pour enfant luxembourgeois est de 299,86 € par mois et par enfant, non imposable.
+    </p>
+
+    <h2>Obligations déclaratives du frontalier français</h2>
+    <p>
+      Le frontalier français a des obligations déclaratives dans les deux pays :
+    </p>
+    <ul>
+      <li><strong>Au Luxembourg :</strong> l'impôt est retenu à la source par l'employeur. Le frontalier n'est généralement pas tenu de déposer une déclaration annuelle au Luxembourg (modèle 100), sauf s'il demande la régularisation de sa retenue (par exemple, pour faire valoir des déductions supplémentaires) ou si ses revenus dépassent certains seuils.</li>
+      <li><strong>En France :</strong> le frontalier doit déclarer l'intégralité de ses revenus luxembourgeois dans sa déclaration annuelle (formulaire 2042 + annexe 2047). Le crédit d'impôt élimine la double imposition, mais les revenus luxembourgeois influencent le taux effectif d'imposition des revenus français.</li>
+    </ul>
+
+    <h2>Avantages et inconvénients du statut de frontalier</h2>
+    <p>
+      Le statut de frontalier France-Luxembourg présente de nombreux avantages : des salaires bruts généralement plus élevés qu'en France pour des postes équivalents, un système de sécurité sociale performant avec une couverture maladie étendue, un barème d'imposition souvent plus favorable, et un cadre de vie français (immobilier moins cher, environnement familier). Les inconvénients principaux sont les temps de trajet (parfois 1h30 à 2h par jour), les contraintes du télétravail (seuil de 34 jours), et la complexité administrative de la double déclaration.
+    </p>
+    <p>
+      Le coût de l'immobilier dans les zones frontalières françaises (Thionville, Metz, Longwy) a fortement augmenté en raison de la demande des frontaliers, ce qui réduit partiellement l'avantage salarial. Néanmoins, le différentiel de salaire net reste significatif : pour un poste comparable, un salarié au Luxembourg perçoit en moyenne 30 à 50 % de plus qu'en France, après impôts et cotisations.
+    </p>
+
+    <h2>FAQ - Frontalier France-Luxembourg</h2>
+
+    <details>
+      <summary><strong>Un frontalier français paie-t-il des impôts en France et au Luxembourg ?</strong></summary>
+      <p>
+        Non, grâce à la convention fiscale franco-luxembourgeoise, le frontalier français est imposé uniquement au Luxembourg sur ses revenus de source luxembourgeoise. Les revenus sont déclarés en France mais bénéficient d'un crédit d'impôt égal à l'impôt français correspondant, ce qui évite la double imposition. Toutefois, les revenus luxembourgeois sont pris en compte pour calculer le taux effectif d'imposition des éventuels revenus français.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Combien de jours de télétravail un frontalier français peut-il effectuer sans impact fiscal ?</strong></summary>
+      <p>
+        Depuis l'accord de 2023, un frontalier français peut télétravailler jusqu'à 34 jours ouvrables par an depuis la France sans impact fiscal. Au-delà de ce seuil, la fraction des revenus correspondant au télétravail excédentaire devient imposable en France. Le seuil de sécurité sociale est distinct et fixé à 49,99 % du temps de travail total.
+      </p>
+    </details>
+
+    <details>
+      <summary><strong>Le frontalier français bénéficie-t-il de la sécurité sociale luxembourgeoise ?</strong></summary>
+      <p>
+        Oui, le frontalier français affilié au Luxembourg bénéficie de la couverture complète de la CNS (maladie, maternité), de l'assurance pension et de l'assurance dépendance. Sa famille (conjoint, enfants) bénéficie également de cette couverture. Il reçoit une carte européenne d'assurance maladie (CEAM) délivrée par la CNS et peut se faire soigner au Luxembourg ou en France.
+      </p>
+    </details>
+
+    <div class="not-prose bg-blue-50 border border-blue-200 rounded-xl p-6 my-8">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Outils associés</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="text-primary hover:underline font-medium">Calculateur salaire brut &rarr; net Luxembourg 2026</a> - Simulez votre salaire net en tant que frontalier.</li>
+        <li><a href="/guides/classes-impot-luxembourg/" class="text-primary hover:underline font-medium">Guide : Classes d'impôt au Luxembourg</a> - Comprendre les classes 1, 1a et 2.</li>
+        <li><a href="/guides/frontalier-belgique-luxembourg/" class="text-primary hover:underline font-medium">Guide : Frontalier Belgique-Luxembourg</a> - Le statut de frontalier belge.</li>
+        <li><a href="/guides/cotisations-sociales-luxembourg/" class="text-primary hover:underline font-medium">Guide : Cotisations sociales</a> - Détail des prélèvements sociaux.</li>
+      </ul>
+    </div>
+
+    <h2>Sources officielles</h2>
+    <ul>
+      <li><a href="https://impotsdirects.public.lu" target="_blank" rel="noopener noreferrer">Administration des Contributions Directes (ACD)</a> - Convention fiscale et formulaires pour non-résidents.</li>
+      <li><a href="https://guichet.public.lu/fr/citoyens/impots-taxes/activite-salariee/imposition-salaire/frontalier.html" target="_blank" rel="noopener noreferrer">Guichet.lu - Travailleurs frontaliers</a> - Informations officielles sur le statut frontalier.</li>
+      <li><a href="https://ccss.lu" target="_blank" rel="noopener noreferrer">Centre commun de la sécurité sociale (CCSS)</a> - Affiliation et cotisations sociales.</li>
+      <li><a href="https://www.impots.gouv.fr" target="_blank" rel="noopener noreferrer">Direction Générale des Finances Publiques (France)</a> - Obligations déclaratives des frontaliers en France.</li>
+    </ul>
+  </article>
+</Layout>

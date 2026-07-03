@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://salairenet.lu',
+  trailingSlash: 'always',  site: 'https://salairenet.lu',
   integrations: [react(), sitemap()],
   vite: { plugins: [tailwindcss()] },
 });
