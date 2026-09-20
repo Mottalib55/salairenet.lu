@@ -20,7 +20,7 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
     <link rel="canonical" href={pageUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="robots" content="index, follow" />
-    <meta name="author" content="Mottalib Radif" />
+    <meta name="author" content="Radif Partners" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -51,19 +51,17 @@ const pageUrl = canonical ?? `${siteUrl}${Astro.url.pathname}`;
       "url": "https://salairenet.lu",
       "logo": "https://salairenet.lu/favicon.svg",
       "founder": {
-        "@type": "Person",
-        "name": "Mottalib Radif"
+        "@type": "Organization",
+        "name": "Radif Partners"
       }
     })} />
 
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mottalib Radif",
+      "@type": "Organization",
+      "name": "Radif Partners",
       "jobTitle": "Expert en Finance Personnelle et Fiscalité",
-      "description": "Diplômé MBA INSEAD, passionné de finance personnelle au Luxembourg. Spécialisé en fiscalité luxembourgeoise, cotisations sociales et classes d'impôt.",
-      "alumniOf": { "@type": "EducationalOrganization", "name": "INSEAD" },
-      "image": "https://salairenet.lu/team/mottalib-radif.jpg",
+      "description": "Diplômé Éditeur de calculateurs et de guides pratiques, passionné de finance personnelle au Luxembourg. Spécialisé en fiscalité luxembourgeoise, cotisations sociales et classes d'impôt.",
       "url": "https://salairenet.lu/a-propos/"
     })} />
 
