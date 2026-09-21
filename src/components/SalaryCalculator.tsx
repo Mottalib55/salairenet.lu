@@ -7,7 +7,7 @@ function fmt(n: number): string {
 }
 
 function pct(n: number): string {
-  return (n * 100).toFixed(1) + ' %';
+  return (n * 100).toLocaleString('fr-LU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
 }
 
 export default function SalaryCalculator() {

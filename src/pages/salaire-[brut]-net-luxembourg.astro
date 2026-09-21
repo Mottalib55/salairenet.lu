@@ -20,7 +20,7 @@ const title = `Salaire ${entry.brutFormatted} brut en net au Luxembourg - Simula
 const description = `Calculez le salaire net pour ${entry.brutFormatted} brut au Luxembourg en 2026. Classe 1 : ${entry.classe1.netFormatted} net. Classe 2 : ${entry.classe2.netFormatted} net. Cotisations, impôt, barèmes officiels.`;
 
 const fmt = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-const pct = (n: number) => (n * 100).toFixed(1) + ' %';
+const pct = (n: number) => (n * 100).toLocaleString('fr-LU', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %';
 
 // Other salary pages for cross-links
 const otherSalaires = salairesData.filter((s) => s.slug !== entry.slug);
