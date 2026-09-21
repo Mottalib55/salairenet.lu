@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="Méthodologie : barème d’impôt, classes, CNS et Fonds pour l’emploi"
+  description="L’ordre exact du calcul : cotisations sociales CNS et pension, barème d’impôt par tranche, classes d’imposition, contribution dépendance et impôt d’équilibrage budgétaire."
+>
+  <div class="max-w-3xl mx-auto">
+    <nav class="text-sm text-gray-500 mb-6">
+      <a href="/" class="hover:text-primary">Accueil</a>
+      <span class="mx-2">/</span>
+      <span class="text-gray-800">Méthodologie</span>
+    </nav>
+
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">Comment le salaire net luxembourgeois est calculé ici</h1>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-3">Les cotisations d’abord, l’impôt ensuite</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">Le net ne se déduit pas d’un pourcentage. Du brut sont d’abord retirées les <strong>cotisations sociales</strong>&nbsp;: assurance maladie et assurance pension, chacune plafonnée au maximum cotisable. Au-delà de ce plafond, la cotisation cesse d’augmenter, ce qui fait baisser le taux effectif sur les hauts salaires.</p>
+      <p class="text-gray-700 leading-relaxed mb-3">L’impôt se calcule ensuite sur le revenu imposable, selon un barème à tranches fines. La <strong>contribution dépendance</strong> obéit à une règle à part&nbsp;: elle s’applique au revenu après un abattement, sans plafond, et elle n’est pas déductible. La confondre avec une cotisation ordinaire est l’erreur la plus fréquente.</p>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-3">La classe d’imposition change tout</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">Le Luxembourg range les contribuables en classes selon la situation familiale, et l’écart de net entre deux classes, à salaire égal, se compte en centaines d’euros par mois. La classe détermine le barème appliqué, pas un simple abattement.</p>
+      <p class="text-gray-700 leading-relaxed mb-3">S’ajoute l’<strong>impôt d’équilibrage budgétaire temporaire</strong>, prélevé sur le revenu après abattement, et la contribution au <strong>Fonds pour l’emploi</strong>, calculée en pourcentage de l’impôt lui-même et non du salaire. Le calculateur les présente séparément pour que chaque ligne du décompte reste vérifiable.</p>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-3">Ce que le calculateur ne fait pas</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">Il ne traite ni les frais de déplacement, ni les abattements pour charges extraordinaires, ni les régimes complémentaires de pension, ni le statut de frontalier avec revenus dans deux pays, ni les revenus non salariaux.</p>
+      <p class="text-gray-700 leading-relaxed mb-3">Le résultat est une estimation documentée. Le décompte qui fait foi est celui de l’employeur, et l’imposition définitive celle de l’Administration des contributions directes.</p>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-3">Quand les barèmes sont revus</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">Le barème est indexé et révisé par la loi budgétaire&nbsp;; les taux de cotisation et les plafonds évoluent avec l’indice. Nous reprenons les valeurs dès leur publication officielle, jamais d’après un communiqué. Chaque page porte sa date de dernière révision, issue de l’historique du site.</p>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold text-gray-800 mb-3">D’où viennent les chiffres</h2>
+      <p class="text-gray-700 leading-relaxed mb-3">Chaque taux et chaque plafond provient des sources officielles suivantes&nbsp;:</p>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li><a class="underline" href="https://impotsdirects.public.lu/fr/az/b/baremes.html" rel="nofollow noopener" target="_blank">Administration des contributions directes &mdash; Barème et classes</a></li>
+        <li><a class="underline" href="https://ccss.public.lu/fr/entreprises/cotisations/taux-cotisation.html" rel="nofollow noopener" target="_blank">Centre commun de la sécurité sociale &mdash; Taux de cotisation</a></li>
+        <li><a class="underline" href="https://guichet.public.lu/fr/citoyens/impots-taxes/salarie-resident.html" rel="nofollow noopener" target="_blank">Guichet.lu &mdash; Fiche de retenue d’impôt</a></li>
+        <li><a class="underline" href="https://cns.public.lu/fr/assure/vie-privee/dependance.html" rel="nofollow noopener" target="_blank">Caisse nationale de santé &mdash; Assurance dépendance</a></li>
+      </ul>
+    </section>
+  </div>
+</Layout>
